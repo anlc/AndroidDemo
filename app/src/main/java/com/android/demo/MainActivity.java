@@ -43,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Map<String, Object>> getData() {
         List<Map<String, Object>> data = new ArrayList<>();
-
         Intent intent = new Intent(Intent.ACTION_MAIN, null);
         intent.setPackage(getPackageName());
         List<ResolveInfo> infoList = getPackageManager().queryIntentActivities(intent, 0);
@@ -60,8 +59,6 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent();
         intent.setClassName(info.activityInfo.applicationInfo.packageName,
                 info.activityInfo.name);
-        Log.e("tag", "-packageName-->" + info.activityInfo.applicationInfo.packageName);
-        Log.e("tag", "--name->" + info.activityInfo.name);
         return intent;
     }
 
