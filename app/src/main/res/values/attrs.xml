@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TabLayout">
+        <attr name="line_indicate_color" format="color" />
+        <attr name="line_indicate_drawable" format="reference" />
+        <attr name="tab_title_color" format="color|reference" />
+        <attr name="line_indicate_width" format="enum">
+            <enum name="wrap_content" value="0" />
+            <enum name="match_parent" value="1" />
+        </attr>
+    </declare-styleable>
+</resources>
