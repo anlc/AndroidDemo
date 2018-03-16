@@ -1,4 +1,4 @@
-package com.android.demo;
+package com.android.demo.activity;
 
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import com.android.demo.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
