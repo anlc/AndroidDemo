@@ -3,7 +3,7 @@ package com.android.demo.utils;
 import android.text.TextUtils;
 import android.widget.Toast;
 
-import com.android.demo.MyApplication;
+import com.android.demo.activity.MyApplication;
 
 /**
  * Created by Administrator on 2018/2/9.

@@ -1,4 +1,4 @@
-package com.android.demo;
+package com.android.demo.activity;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 
+import com.android.demo.R;
 import com.android.demo.utils.CheckUtil;
 import com.android.demo.utils.EditTextUtil;
 import com.android.demo.widget.FlowLayout;
