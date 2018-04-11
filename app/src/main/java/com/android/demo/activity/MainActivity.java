@@ -50,8 +50,9 @@ public class MainActivity extends AppCompatActivity {
         List<ResolveInfo> infoList = getPackageManager().queryIntentActivities(intent, 0);
         for (ResolveInfo info : infoList) {
             String label = info.loadLabel(getPackageManager()).toString();
-            String name = info.activityInfo.name.replace(getPackageName(), "");
+            String name = info.activityInfo.name.replace(getPackageName() + ".activity", "");
             name = name.replace(".", "");
+            if (name.equals("MainActivity")) continue;
             addItem(data, name, label, intent(info));
         }
         return data;
