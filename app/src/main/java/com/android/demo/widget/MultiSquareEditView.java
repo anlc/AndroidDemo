@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
 import android.graphics.RectF;
+import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.AttributeSet;
@@ -27,7 +28,7 @@ import java.util.List;
 public class MultiSquareEditView extends EditText {
 
     private List<String> dataList;
-    private CharSequence oldStr;
+    private int oldStrLength;
 
     private float squareWidth;
     private float squareHeight;
@@ -35,6 +36,18 @@ public class MultiSquareEditView extends EditText {
     private int squareCount;
     private Paint bgPaint;
     private Paint textPaint;
+    private Paint cursorPaint;
+    private boolean cursorVisible = false;
+
+    private InputCompleteListener inputCompleteListener;
+
+    public void setOnInputCompleteListener(InputCompleteListener inputCompleteListener) {
+        this.inputCompleteListener = inputCompleteListener;
+    }
+
+    public interface InputCompleteListener {
+        void inputComplete();
+    }
 
     public MultiSquareEditView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -58,12 +71,14 @@ public class MultiSquareEditView extends EditText {
         textPaint = PaintFactory.createFillPaint(Color.BLACK);
         textPaint.setStrokeWidth(1);
         textPaint.setTextSize(getTextSize());
+        cursorPaint = PaintFactory.createFillPaint(Color.BLACK);
+        cursorPaint.setStrokeWidth(MeasureUtil.dp(context, 1));
         dataList = new ArrayList<>();
 
         addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                oldStr = new String(s.toString());
+                oldStrLength = s.length();
             }
 
             @Override
@@ -72,12 +87,17 @@ public class MultiSquareEditView extends EditText {
 
             @Override
             public void afterTextChanged(Editable s) {
-                if (dataList.size() < squareCount && s.length() > 0 && s.length() > oldStr.length()) {
+                if (dataList.size() < squareCount && s.length() > 0 && s.length() > oldStrLength) {
                     dataList.add(String.valueOf(s.charAt(s.length() - 1)));
                 }
                 postInvalidate();
+                if (dataList.size() == squareCount && inputCompleteListener != null) {
+                    inputCompleteListener.inputComplete();
+                    clearText();
+                }
             }
         });
+        startPost();
     }
 
     @Override
@@ -91,22 +111,32 @@ public class MultiSquareEditView extends EditText {
 
     @Override
     protected void onDraw(Canvas canvas) {
-//        super.onDraw(canvas);
         int width = getWidth();
         int start = (int) (width - squareCount * (squareWidth + squareItemMargin * 2)) / 2;
         float radius = MeasureUtil.dp(getContext(), 3);
         for (int i = 0; i < squareCount; i++) {
-            float left = start + (i + 1) * squareItemMargin + i * squareWidth + (i * squareItemMargin);
-            float top = getPaddingTop() + getHeight() / 2 - squareHeight / 2;
-            float right = left + squareWidth;
-            float bottom = top + squareHeight;
-            RectF rectF = new RectF(left, top, right, bottom);
+            RectF rectF = getRect(start, i);
             canvas.drawRoundRect(rectF, radius, radius, bgPaint);
             if (i < dataList.size()) {
-                float x = left + squareWidth / 2 - textWidth(textPaint, dataList.get(i)) / 2;
-                float y = top + squareHeight / 2 + textHeight(textPaint, dataList.get(i)) / 2;
+                float x = rectF.left + squareWidth / 2 - textWidth(textPaint, dataList.get(i)) / 2;
+                float y = rectF.top + squareHeight / 2 + textHeight(textPaint, dataList.get(i)) / 2;
                 canvas.drawText(dataList.get(i), x, y, textPaint);
             }
+        }
+
+        if (cursorVisible) {
+            int i = dataList.size();
+            RectF rectF = getRect(start, i);
+            if (flag) {
+                cursorPaint.setColor(Color.BLACK);
+            } else {
+                cursorPaint.setColor(Color.WHITE);
+            }
+            canvas.drawLine(rectF.left + squareWidth / 2,
+                    rectF.top + MeasureUtil.dp(getContext(), 10),
+                    rectF.left + squareWidth / 2,
+                    rectF.bottom - MeasureUtil.dp(getContext(), 10), cursorPaint);
+            flag = !flag;
         }
     }
 
@@ -122,5 +152,45 @@ public class MultiSquareEditView extends EditText {
         Rect rect = new Rect();
         paint.getTextBounds(message, 0, message.length(), rect);
         return rect;
+    }
+
+    private RectF getRect(int start, int i) {
+        float left = start + (i + 1) * squareItemMargin + i * squareWidth + (i * squareItemMargin);
+        float top = getPaddingTop() + getHeight() / 2 - squareHeight / 2;
+        float right = left + squareWidth;
+        float bottom = top + squareHeight;
+        return new RectF(left, top, right, bottom);
+    }
+
+    @Override
+    public void setCursorVisible(boolean cursorVisible) {
+        this.cursorVisible = cursorVisible;
+    }
+
+    boolean flag = true;
+    Handler handler = new Handler();
+    Runnable runnable = new Runnable() {
+        @Override
+        public void run() {
+            postInvalidate();
+        }
+    };
+
+    private void startPost() {
+        handler.postDelayed(runnable, 1000);
+    }
+
+    private void stopPost() {
+        handler.removeCallbacks(runnable);
+    }
+
+    @Override
+    protected void onDetachedFromWindow() {
+        super.onDetachedFromWindow();
+        stopPost();
+    }
+
+    public void clearText() {
+        dataList.clear();
     }
 }
