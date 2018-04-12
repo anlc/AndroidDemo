@@ -45,7 +45,15 @@
 
         <activity
             android:name=".activity.BottomSheetActivity"
-            android:label="multi square editView">
+            android:label="bottom sheet">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.BannerActivity"
+            android:label="banner">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
