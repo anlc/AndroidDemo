@@ -36,7 +36,7 @@ public class ListTextCenterAdapter extends RecyclerView.Adapter<ListTextCenterAd
         textView.setTextSize(14);
         textView.setHeight(MeasureUtil.dp(context, 42));
         textView.setGravity(Gravity.CENTER);
-        textView.setTextColor(context.getResources().getColor(R.color.text_color));
+        textView.setTextColor(context.getResources().getColor(R.color.color_333333));
         textView.setLayoutParams(new ViewGroup.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT));
         return new Holder(textView);
     }

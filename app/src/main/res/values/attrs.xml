@@ -17,4 +17,30 @@
         <attr name="item_height" format="dimension" />
         <attr name="square_bg" format="color" />
     </declare-styleable>
+
+    <attr name="item_key" format="string" />
+    <attr name="item_key_color" format="reference|color" />
+    <attr name="item_key_size" format="integer" />
+    <attr name="item_value" format="string" />
+    <attr name="item_hint_value" format="string" />
+    <attr name="item_value_color" format="reference|color" />
+    <attr name="item_hint_value_color" format="reference|color" />
+    <attr name="item_value_size" format="integer" />
+    <attr name="item_show_arrow" format="reference|boolean" />
+    <attr name="item_show_bottom_line" format="reference|boolean" />
+    <attr name="item_show_add_img" format="reference|boolean" />
+    <attr name="item_show_bottom_dash" format="boolean" />
+
+    <declare-styleable name="ListItemView">
+        <attr name="item_key" />
+        <attr name="item_key_color" />
+        <attr name="item_key_size" />
+        <attr name="item_value" />
+        <attr name="item_value_color" />
+        <attr name="item_value_size" />
+        <attr name="item_show_arrow" />
+        <attr name="item_show_bottom_line" />
+        <attr name="item_right_img" />
+        <attr name="item_show_bottom_dash" />
+    </declare-styleable>
 </resources>

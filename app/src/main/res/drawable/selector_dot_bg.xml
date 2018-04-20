@@ -9,7 +9,7 @@
 
     <item>
         <shape android:shape="oval">
-            <solid android:color="@color/hint_color" />
+            <solid android:color="@color/color_999999" />
         </shape>
     </item>
 
