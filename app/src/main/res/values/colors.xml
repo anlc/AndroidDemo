@@ -4,6 +4,9 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
 
-    <color name="hint_color">#999999</color>
-    <color name="text_color">#333333</color>
+    <color name="ac_bg_color">#f2f2f2</color>
+
+    <color name="color_999999">#999999</color>
+    <color name="color_333333">#333333</color>
+    <color name="color_666666">#666666</color>
 </resources>

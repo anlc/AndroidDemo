@@ -45,10 +45,10 @@ public class EditTextUtil {
         }
         if (TextUtils.isEmpty(str)) {
             textView.setText(context.getResources().getString(hintRes));
-            textView.setTextColor(context.getResources().getColor(R.color.hint_color));
+            textView.setTextColor(context.getResources().getColor(R.color.color_999999));
         } else {
             textView.setText(str);
-            textView.setTextColor(context.getResources().getColor(R.color.text_color));
+            textView.setTextColor(context.getResources().getColor(R.color.color_333333));
         }
     }
 }
