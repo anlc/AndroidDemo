@@ -2,7 +2,6 @@ package com.android.demo.widget;
 
 import android.content.Context;
 import android.content.res.TypedArray;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -15,7 +14,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.android.demo.R;
-import com.android.demo.utils.MeasureUtil;
 
 /**
  * Created by Administrator on 2018/4/16.
@@ -102,7 +100,7 @@ public class ListItemView extends FrameLayout {
 ////        super.onMeasure(widthMeasureSpec, heightMeasureSpec);
 //    }
 
-    public static class ViewConfig {
+    private class ViewConfig {
         String keyText;
         int keyTextSize;
         int keyTextColor;

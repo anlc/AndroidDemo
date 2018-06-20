@@ -18,54 +18,90 @@
             </intent-filter>
         </activity>
 
+        <!-- 首页类型 -->
         <activity
-            android:name=".activity.LuckActivity"
+            android:name=".activity.CustomViewActivity"
+            android:label="custom view demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.DesignActivity"
+            android:label="design lib demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <!-- 自定义view类型 -->
+        <activity
+            android:name=".activity.custom_view.LuckActivity"
             android:label="sudoku luck">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.android.demo.custom" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.FlowTagActivity"
+            android:name=".activity.custom_view.FlowTagActivity"
             android:label="flow tag layout">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.android.demo.custom" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.AuthCodeActivity"
+            android:name=".activity.custom_view.AuthCodeActivity"
             android:label="multi square editView"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.android.demo.custom" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.BottomSheetActivity"
-            android:label="bottom sheet">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-
-        <activity
-            android:name=".activity.BannerActivity"
+            android:name=".activity.custom_view.BannerActivity"
             android:label="banner">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.android.demo.custom" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.ListItemActivity"
+            android:name=".activity.custom_view.ListItemActivity"
             android:label="list item">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="com.android.demo.custom" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activity.custom_view.SelectViewActivity"
+            android:label="select view">
+            <intent-filter>
+                <action android:name="com.android.demo.custom" />
+            </intent-filter>
+        </activity>
+
+        <!-- design包的使用 -->
+        <activity
+            android:name=".activity.design.BottomSheetActivity"
+            android:label="bottom sheet">
+            <intent-filter>
+                <action android:name="com.android.demo.design.demo" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.design.CoordinatorLayoutActivity"
+            android:label="scroll">
+            <intent-filter>
+                <action android:name="com.android.demo.design.demo" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>
