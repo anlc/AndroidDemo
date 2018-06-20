@@ -1,4 +1,4 @@
-package com.android.demo.activity;
+package com.android.demo.activity.custom_view;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
