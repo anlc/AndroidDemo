@@ -21,6 +21,7 @@
         android:textSize="13sp" />
 
     <com.android.demo.widget.MultiSquareEditView
+        android:id="@+id/ac_edit_auth_code"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@null"

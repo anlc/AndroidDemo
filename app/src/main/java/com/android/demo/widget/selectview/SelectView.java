@@ -53,8 +53,8 @@ public class SelectView extends View {
         pointPaint = PaintFactory.createFillPaint(Color.RED);
         pointPaint.setStrokeWidth(5);
         textPaint = PaintFactory.createFillPaint(Color.BLACK);
-        textPaint.setTextSize(MeasureUtil.sp(context, 15));
-        itemPadding = MeasureUtil.dp(context, 12);
+        textPaint.setTextSize(MeasureUtil.sp(15));
+        itemPadding = MeasureUtil.dp(12);
 
         touchSlop = ViewConfiguration.get(context).getScaledTouchSlop();
         scroller = new Scroller(context, new DecelerateInterpolator());
