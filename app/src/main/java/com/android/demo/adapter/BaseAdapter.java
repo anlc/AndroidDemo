@@ -23,6 +23,7 @@ public abstract class BaseAdapter<T, Holder extends RecyclerView.ViewHolder> ext
         this.layoutRes = layoutRes;
     }
 
+
     public void setData(List<T> data) {
         this.data = data;
         notifyDataSetChanged();
@@ -31,7 +32,7 @@ public abstract class BaseAdapter<T, Holder extends RecyclerView.ViewHolder> ext
     @Override
     public Holder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(layoutRes, parent, false);
-        return newHolder(view);
+        return newHolder(view, viewType);
     }
 
     @Override
@@ -39,7 +40,7 @@ public abstract class BaseAdapter<T, Holder extends RecyclerView.ViewHolder> ext
         onBind(holder, position);
     }
 
-    protected abstract Holder newHolder(View view);
+    protected abstract Holder newHolder(View view, int viewType);
 
     protected abstract void onBind(Holder holder, int position);
 

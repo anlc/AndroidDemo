@@ -51,8 +51,8 @@ public class BannerViewPager extends FrameLayout {
         dotLayout.setOrientation(LinearLayout.HORIZONTAL);
         LayoutParams layoutParams = new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
         layoutParams.gravity = Gravity.BOTTOM | Gravity.RIGHT;
-        layoutParams.bottomMargin = MeasureUtil.dp(context, 16);
-        layoutParams.rightMargin = MeasureUtil.dp(context, 16);
+        layoutParams.bottomMargin = MeasureUtil.dp(16);
+        layoutParams.rightMargin = MeasureUtil.dp(16);
         addView(dotLayout, layoutParams);
         setBackgroundColor(Color.WHITE);
 
@@ -83,10 +83,10 @@ public class BannerViewPager extends FrameLayout {
                 break;
             }
             View dotView = new View(getContext());
-            int width = MeasureUtil.dp(getContext(), 5);
+            int width = MeasureUtil.dp(5);
             LinearLayout.LayoutParams dotParams = new LinearLayout.LayoutParams(width, width);
             dotView.setBackgroundResource(R.drawable.selector_dot_bg);
-            dotParams.leftMargin = MeasureUtil.dp(getContext(), 5);
+            dotParams.leftMargin = MeasureUtil.dp(5);
             dotLayout.addView(dotView, dotParams);
             if (i == 0) {
                 dotView.setSelected(true);

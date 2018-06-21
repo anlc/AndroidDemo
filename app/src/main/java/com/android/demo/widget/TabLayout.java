@@ -196,7 +196,7 @@ public class TabLayout extends HorizontalScrollView {
             if (indicateColor != -1) {
                 borderPaint.setStyle(Paint.Style.FILL);
                 borderPaint.setColor(indicateColor);
-                borderHeight = MeasureUtil.dp(context, 2);
+                borderHeight = MeasureUtil.dp(2);
             }
             Drawable drawable = array.getDrawable(R.styleable.TabLayout_line_indicate_drawable);
             if (drawable != null) {
