@@ -35,6 +35,14 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".activity.DemoActivity"
+            android:label="design lib demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
         <!-- 自定义view类型 -->
         <activity
             android:name=".activity.custom_view.LuckActivity"
@@ -99,6 +107,15 @@
             android:label="simple coordinator demo">
             <intent-filter>
                 <action android:name="com.android.demo.design.demo" />
+            </intent-filter>
+        </activity>
+
+        <!-- demo -->
+        <activity
+            android:name=".activity.demo.SeekBarActivity"
+            android:label="seek bar demo">
+            <intent-filter>
+                <action android:name="com.android.demo.demo" />
             </intent-filter>
         </activity>
 
