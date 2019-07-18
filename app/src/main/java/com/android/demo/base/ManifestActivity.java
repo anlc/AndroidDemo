@@ -2,6 +2,8 @@ package com.android.demo.base;
 
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -22,6 +24,18 @@ public class ManifestActivity extends BaseActivity {
     private static final String TAG_CLASS_NAME = "className";
     private static final String TAG_DESCRIPTION = "description";
     private static final String TAG_INTENT = "intent";
+
+    @Override
+    protected void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+    }
+
+    public void setContentAndAction(String action){
+        ListView listView = new ListView(this);
+        setContentView(listView);
+
+        setAdapter(listView, action);
+    }
 
     public final void setAdapter(ListView listView, String manifestAction) {
         listView.setAdapter(new SimpleAdapter(this, getData(manifestAction),
