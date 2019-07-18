@@ -119,6 +119,15 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".activity.demo.AidlActivity"
+            android:label="aidl demo">
+            <intent-filter>
+                <action android:name="com.android.demo.demo" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".service.LocalService" />
     </application>
 
 </manifest>
