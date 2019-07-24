@@ -2,6 +2,11 @@ package com.example.service;
 
 import org.junit.Test;
 
+import java.lang.ref.WeakReference;
+import java.net.SocketTimeoutException;
+import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
+
 import static org.junit.Assert.*;
 
 /**
@@ -10,8 +15,13 @@ import static org.junit.Assert.*;
  * @see <a href="http://d.android.com/tools/testing">Testing documentation</a>
  */
 public class ExampleUnitTest {
+
+
     @Test
     public void addition_isCorrect() {
-        assertEquals(4, 2 + 2);
+
     }
+
+
+
 }
