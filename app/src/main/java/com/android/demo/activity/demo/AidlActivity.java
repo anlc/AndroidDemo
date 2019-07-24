@@ -8,6 +8,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 
 import com.android.demo.R;
@@ -31,13 +32,12 @@ public class AidlActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View v) {
-        Intent startService = new Intent(this, LocalService.class);
         switch (v.getId()) {
             case R.id.start:
-                startService(startService);
+                startService(new Intent(this, LocalService.class));
                 break;
             case R.id.stop:
-                stopService(startService);
+                stopService(new Intent(this, LocalService.class));
                 break;
             case R.id.bind:
                 bindRemoteService();

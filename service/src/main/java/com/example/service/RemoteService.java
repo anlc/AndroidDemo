@@ -33,7 +33,7 @@ public class RemoteService extends Service {
         return new AidlBinder();
     }
 
-    class AidlBinder extends IRemoteInterface.Stub {
+    class AidlBinder extends com.example.service.IRemoteInterface.Stub {
 
         @Override
         public void getRemoteString() throws RemoteException {
