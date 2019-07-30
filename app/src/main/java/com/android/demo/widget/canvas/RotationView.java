@@ -19,6 +19,8 @@ import com.android.demo.utils.factory.PaintFactory;
 public class RotationView extends View {
 
     private Paint paint;
+    private int hRadius = 0;
+    private int mRadius = 0;
 
     public RotationView(Context context) {
         this(context, null);
@@ -53,5 +55,32 @@ public class RotationView extends View {
             canvas.drawLine(cx, 0, cy, length, paint);
             canvas.rotate(360 / 24, cx, cy);
         }
+
+        canvas.save();
+
+        canvas.translate(cx, cy);
+
+        float hour = cx / 2;
+        float minute = cx * 3 / 4;
+        canvas.drawLine(0,
+                0,
+                (float) (hour * Math.cos(hRadius)),
+                (float) (hour * Math.sin(hRadius)),
+                paint);
+
+        canvas.drawLine(0,
+                0,
+                (float) (minute * Math.cos(mRadius)),
+                (float) (minute * Math.sin(mRadius)),
+                paint);
+
+        canvas.restore();
+
+        mRadius++;
+        if (mRadius % 10 == 0) {
+            hRadius++;
+        }
+
+        postInvalidateDelayed(500);
     }
 }
