@@ -43,6 +43,14 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".activity.AnimationActivity"
+            android:label="design lib demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
         <!-- 自定义view类型 -->
         <activity
             android:name=".activity.custom_view.LuckActivity"
@@ -128,6 +136,13 @@
         </activity>
 
         <service android:name=".service.LocalService" />
+
+        <activity android:name=".activity.animation.RotationActivity"
+            android:label="rotation canvas">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

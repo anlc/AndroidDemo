@@ -3,12 +3,9 @@ package com.android.demo.activity.custom_view;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 
 import com.android.demo.R;
-import com.android.demo.listener.SoftKeyBoardListener;
 import com.android.demo.utils.Utils;
-import com.android.demo.widget.EditPhoneNumView;
 import com.android.demo.widget.MultiSquareEditView;
 
 /**

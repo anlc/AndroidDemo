@@ -32,13 +32,26 @@ public class RotationView extends View {
         super(context, attrs, defStyleAttr);
 
         paint = PaintFactory.createStrokePaint(Color.BLACK);
+        paint.setStrokeWidth(3);
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        int height = getMeasuredHeight();
-        int width = getMeasuredWidth();
-        canvas.drawCircle(width / 2, height / 2, height / 2, paint);
+
+        float cx = getMeasuredWidth() / 2;
+        float cy = getMeasuredHeight() / 2;
+        float radius = cy;
+
+        canvas.drawCircle(cx, cy, radius, paint);
+
+        for (int i = 0; i < 60; i++) {
+            int length = 10;
+            if (i % 6 == 0) {
+                length = 30;
+            }
+            canvas.drawLine(cx, 0, cy, length, paint);
+            canvas.rotate(360 / 24, cx, cy);
+        }
     }
 }
