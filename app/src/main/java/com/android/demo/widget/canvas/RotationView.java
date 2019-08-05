@@ -81,6 +81,6 @@ public class RotationView extends View {
             hRadius++;
         }
 
-        postInvalidateDelayed(500);
+//        postInvalidateDelayed(500);
     }
 }
