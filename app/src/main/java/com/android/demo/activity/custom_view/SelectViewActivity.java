@@ -1,14 +1,13 @@
 package com.android.demo.activity.custom_view;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.android.demo.R;
 import com.android.demo.widget.selectview.SelectView;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 /**

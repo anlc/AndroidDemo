@@ -1,6 +1,6 @@
 package com.android.demo.base;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 /**
  * Created by Administrator on 2018/6/20.

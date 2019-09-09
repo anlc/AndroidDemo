@@ -3,7 +3,12 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidDemo.iml" filepath="$PROJECT_DIR$/AndroidDemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/butter/annotation/annotation.iml" filepath="$PROJECT_DIR$/butter/annotation/annotation.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/butter/butterdemo/butterdemo.iml" filepath="$PROJECT_DIR$/butter/butterdemo/butterdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/butter/butterknife/butterknife.iml" filepath="$PROJECT_DIR$/butter/butterknife/butterknife.iml" />
+      <module fileurl="file://$PROJECT_DIR$/butter/compiler/compiler.iml" filepath="$PROJECT_DIR$/butter/compiler/compiler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/butter/runtime/runtime.iml" filepath="$PROJECT_DIR$/butter/runtime/runtime.iml" />
       <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
     </modules>
   </component>

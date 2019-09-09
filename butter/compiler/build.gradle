@@ -1,0 +1,13 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(path: ':annotation')
+    implementation 'com.squareup:javapoet:1.7.0'
+    api 'com.google.guava:guava:28.1-android'
+    implementation 'com.google.auto.service:auto-service:1.0-rc3'
+    implementation files('/Library/Java/JavaVirtualMachines/jdk1.8.0_191.jdk/Contents/Home/lib/tools.jar')
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"

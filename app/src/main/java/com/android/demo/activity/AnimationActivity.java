@@ -1,7 +1,7 @@
 package com.android.demo.activity;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 
 import com.android.demo.base.Constants;
 import com.android.demo.base.ManifestActivity;
