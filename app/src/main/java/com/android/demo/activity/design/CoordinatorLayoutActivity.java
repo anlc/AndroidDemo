@@ -1,22 +1,17 @@
 package com.android.demo.activity.design;
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.Nullable;
+import com.google.android.material.tabs.TabLayout;
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import com.android.demo.R;
-import com.android.demo.adapter.BaseAdapter;
 import com.android.demo.adapter.FragmentAdapter;
-import com.android.demo.adapter.SimpleAdapter;
 import com.android.demo.base.BaseActivity;
 import com.android.demo.fragment.ListFragment;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 

@@ -1,1 +1,16 @@
 include ':app', ':service'
+
+include(':compiler')
+project(':compiler').projectDir = file('butter/compiler')
+
+include(':annotation')
+project(':annotation').projectDir = file('butter/annotation')
+
+include(':butterdemo')
+project(':butterdemo').projectDir = file('butter/butterdemo')
+
+include(':butterknife')
+project(':butterknife').projectDir = file('butter/butterknife')
+
+include(':runtime')
+project(':runtime').projectDir = file('butter/runtime')

@@ -3,7 +3,7 @@ package com.android.demo.base;
 import android.content.Intent;
 import android.content.pm.ResolveInfo;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
+import androidx.annotation.Nullable;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;

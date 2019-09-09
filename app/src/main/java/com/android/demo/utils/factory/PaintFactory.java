@@ -1,7 +1,7 @@
 package com.android.demo.utils.factory;
 
 import android.graphics.Paint;
-import android.support.annotation.ColorInt;
+import androidx.annotation.ColorInt;
 
 /**
  * Created by Administrator on 2018/4/4.
