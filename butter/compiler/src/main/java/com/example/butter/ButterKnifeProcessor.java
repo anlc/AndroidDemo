@@ -185,58 +185,13 @@ public class ButterKnifeProcessor extends AbstractProcessor {
         error(element, "Unable to parse @%s binding.\n\n%s", annotation.getSimpleName(), stackTrace);
     }
 
-    private boolean isBindingInWrongPackage(Class<? extends Annotation> annotationClass,
-                                            Element element) {
-        TypeElement enclosingElement = (TypeElement) element.getEnclosingElement();
-        String qualifiedName = enclosingElement.getQualifiedName().toString();
-
-        if (qualifiedName.startsWith("android.")) {
-            error(element, "@%s-annotated class incorrectly in Android framework package. (%s)",
-                    annotationClass.getSimpleName(), qualifiedName);
-            return true;
-        }
-        if (qualifiedName.startsWith("java.")) {
-            error(element, "@%s-annotated class incorrectly in Java framework package. (%s)",
-                    annotationClass.getSimpleName(), qualifiedName);
-            return true;
-        }
-
-        return false;
-    }
-
     private void parseBindView(Element element, Map<TypeElement, BindingSet.Builder> builderMap,
                                Set<TypeElement> erasedTargetNames) {
+
         TypeElement enclosingElement = (TypeElement) element.getEnclosingElement();
-
-        // Start by verifying common generated code restrictions.
-//        boolean hasError = isInaccessibleViaGeneratedCode(BindView.class, "fields", element)
-//                || isBindingInWrongPackage(BindView.class, element);
-
-//        // Verify that the target type extends from View.
         TypeMirror elementType = element.asType();
-//        if (elementType.getKind() == TypeKind.TYPEVAR) {
-//            TypeVariable typeVariable = (TypeVariable) elementType;
-//            elementType = typeVariable.getUpperBound();
-//        }
-//        Name qualifiedName = enclosingElement.getQualifiedName();
         Name simpleName = element.getSimpleName();
-//        if (!isSubtypeOfType(elementType, VIEW_TYPE) && !isInterface(elementType)) {
-//            if (elementType.getKind() == TypeKind.ERROR) {
-//                note(element, "@%s field with unresolved type (%s) "
-//                                + "must elsewhere be generated as a View or interface. (%s.%s)",
-//                        BindView.class.getSimpleName(), elementType, qualifiedName, simpleName);
-//            } else {
-//                error(element, "@%s fields must extend from View or be an interface. (%s.%s)",
-//                        BindView.class.getSimpleName(), qualifiedName, simpleName);
-////                hasError = true;
-//            }
-//        }
 
-//        if (hasError) {
-//            return;
-//        }
-
-        // Assemble information on the field.
         int id = element.getAnnotation(BindView.class).value();
         BindingSet.Builder builder = builderMap.get(enclosingElement);
         Id resourceId = elementToId(element, BindView.class, id);
@@ -311,47 +266,8 @@ public class ButterKnifeProcessor extends AbstractProcessor {
         return null;
     }
 
-    private boolean isInaccessibleViaGeneratedCode(Class<? extends Annotation> annotationClass,
-                                                   String targetThing, Element element) {
-        boolean hasError = false;
-        TypeElement enclosingElement = (TypeElement) element.getEnclosingElement();
-
-        // Verify field or method modifiers.
-        Set<Modifier> modifiers = element.getModifiers();
-        if (modifiers.contains(PRIVATE) || modifiers.contains(STATIC)) {
-            error(element, "@%s %s must not be private or static. (%s.%s)",
-                    annotationClass.getSimpleName(), targetThing, enclosingElement.getQualifiedName(),
-                    element.getSimpleName());
-            hasError = true;
-        }
-
-        // Verify containing type.
-        if (enclosingElement.getKind() != CLASS) {
-            error(enclosingElement, "@%s %s may only be contained in classes. (%s.%s)",
-                    annotationClass.getSimpleName(), targetThing, enclosingElement.getQualifiedName(),
-                    element.getSimpleName());
-            hasError = true;
-        }
-
-        // Verify containing class visibility is not private.
-        if (enclosingElement.getModifiers().contains(PRIVATE)) {
-            error(enclosingElement, "@%s %s may not be contained in private classes. (%s.%s)",
-                    annotationClass.getSimpleName(), targetThing, enclosingElement.getQualifiedName(),
-                    element.getSimpleName());
-            hasError = true;
-        }
-
-        return hasError;
-    }
-
     private static boolean isTypeEqual(TypeMirror typeMirror, String otherType) {
         return otherType.equals(typeMirror.toString());
-    }
-
-
-    private boolean isInterface(TypeMirror typeMirror) {
-        return typeMirror instanceof DeclaredType
-                && ((DeclaredType) typeMirror).asElement().getKind() == INTERFACE;
     }
 
     static boolean isSubtypeOfType(TypeMirror typeMirror, String otherType) {

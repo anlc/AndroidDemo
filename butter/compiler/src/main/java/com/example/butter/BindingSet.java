@@ -48,14 +48,7 @@ final class BindingSet {
       ClassName.get("androidx.annotation", "UiThread");
   private static final ClassName CALL_SUPER =
       ClassName.get("androidx.annotation", "CallSuper");
-  private static final ClassName SUPPRESS_LINT =
-      ClassName.get("android.annotation", "SuppressLint");
   private static final ClassName UNBINDER = ClassName.get("com.c.runtime", "Unbinder");
-  static final ClassName BITMAP_FACTORY = ClassName.get("android.graphics", "BitmapFactory");
-  static final ClassName CONTEXT_COMPAT =
-      ClassName.get("androidx.core.content", "ContextCompat");
-  static final ClassName ANIMATION_UTILS =
-          ClassName.get("android.view.animation", "AnimationUtils");
 
   private final TypeName targetTypeName;
   private final ClassName bindingClassName;
@@ -160,19 +153,6 @@ final class BindingSet {
       builder.addStatement("this(target, target.getWindow().getDecorView())");
     } else {
       builder.addStatement("this(target, target)");
-    }
-    return builder.build();
-  }
-
-  private MethodSpec createBindingConstructorForDialog() {
-    MethodSpec.Builder builder = MethodSpec.constructorBuilder()
-        .addAnnotation(UI_THREAD)
-        .addModifiers(PUBLIC)
-        .addParameter(targetTypeName, "target");
-    if (constructorNeedsView()) {
-      builder.addStatement("this(target, target.getWindow().getDecorView())");
-    } else {
-      builder.addStatement("this(target, target.getContext())");
     }
     return builder.build();
   }
@@ -705,27 +685,6 @@ final class BindingSet {
 
     void addField(Id id, FieldViewBinding binding) {
       getOrCreateViewBindings(id).setFieldBinding(binding);
-    }
-
-    void addFieldCollection(FieldCollectionViewBinding binding) {
-      collectionBindings.add(binding);
-    }
-
-    boolean addMethod(
-        Id id,
-        ListenerClass listener,
-        ListenerMethod method,
-        MethodViewBinding binding) {
-      ViewBinding.Builder viewBinding = getOrCreateViewBindings(id);
-      if (viewBinding.hasMethodBinding(listener, method) && !"void".equals(method.returnType())) {
-        return false;
-      }
-      viewBinding.addMethodBinding(listener, method, binding);
-      return true;
-    }
-
-    void addResource(ResourceBinding binding) {
-      resourceBindings.add(binding);
     }
 
     void setParent(BindingSet parent) {

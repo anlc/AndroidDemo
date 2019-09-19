@@ -14,6 +14,7 @@
             <option value="$PROJECT_DIR$/butter/butterknife" />
             <option value="$PROJECT_DIR$/butter/compiler" />
             <option value="$PROJECT_DIR$/butter/runtime" />
+            <option value="$PROJECT_DIR$/httpdemo" />
             <option value="$PROJECT_DIR$/service" />
           </set>
         </option>
