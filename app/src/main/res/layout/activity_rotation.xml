@@ -10,14 +10,18 @@
         android:layout_height="160dp"
         android:layout_marginTop="12dp" />
 
+    <com.android.demo.widget.canvas.RoundImageView
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_marginTop="30dp" />
+
     <com.android.demo.widget.canvas.RulerView
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_marginTop="30dp" />
 
-    <com.android.demo.widget.canvas.RoundImageView
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_marginTop="30dp" />
+    <com.android.demo.widget.canvas.RectView
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
 
 </LinearLayout>
