@@ -1,6 +1,8 @@
 package com.android.demo.widget.canvas;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
@@ -42,6 +44,18 @@ public class RectView extends View {
         intersectPaint = PaintFactory.createFillPaint(Color.RED);
         unionPaint = PaintFactory.createFillPaint(Color.GREEN);
 
+        BitmapFactory.decodeFile("");
+
+        Bitmap bitmap = Bitmap.createBitmap(200, 200, Bitmap.Config.ARGB_4444);
+        Bitmap copy = bitmap.copy(Bitmap.Config.ARGB_8888, true);
+        if (bitmap != null && !bitmap.isRecycled()) {
+            bitmap.recycle();
+            System.gc();
+            bitmap = null;
+        }
+
+        Paint paint = PaintFactory.createFillPaint(Color.GREEN);
+        paint.setTextSize(12);
     }
 
     @Override
