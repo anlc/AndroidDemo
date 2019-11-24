@@ -26,12 +26,12 @@ public class RoundImageView extends View {
 
         mPaint = PaintFactory.createFillPaint(Color.BLACK);
         bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.timg);
+        mPaint.setShader(new BitmapShader(bitmap, Shader.TileMode.MIRROR, Shader.TileMode.MIRROR));
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        mPaint.setShader(new BitmapShader(bitmap, Shader.TileMode.MIRROR, Shader.TileMode.MIRROR));
         canvas.drawCircle(getWidth() / 2, getHeight() / 2, getWidth() / 2, mPaint);
     }
 }
