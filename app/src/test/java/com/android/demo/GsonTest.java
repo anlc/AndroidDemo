@@ -14,7 +14,8 @@ import org.junit.Test;
 public class GsonTest {
 
     class Bean {
-        String name;
+
+        transient String name;
         @SerializedName("age")
         String value;
 
@@ -30,8 +31,10 @@ public class GsonTest {
     }
 
     @Test
-    public void TestGson(){
-        System.out.println(new Gson().toJson(new Bean("name", "age")));
+    public void TestGson() {
+//        Gson gson = new GsonBuilder().excludeFieldsWithoutExposeAnnotation().create();
+        Gson gson = new Gson();
+        System.out.println(gson.toJson(new Bean("name", "age")));
     }
 
 }
