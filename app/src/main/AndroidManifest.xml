@@ -159,6 +159,20 @@
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activity.animation.ScrollerActivity"
+            android:label="scroller method">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.animation.MultiLauncherActivity"
+            android:label="velocity tracker">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
