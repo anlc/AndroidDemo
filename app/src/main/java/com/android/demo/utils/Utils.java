@@ -5,7 +5,9 @@ import android.widget.Toast;
 import com.android.demo.base.CustomApplication;
 
 /**
- * Created by Administrator on 2018/6/21.
+ *
+ * @author Administrator
+ * @date 2018/6/21
  */
 
 public class Utils {
