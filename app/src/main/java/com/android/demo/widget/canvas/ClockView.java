@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.graphics.Point;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.View;
@@ -30,6 +31,7 @@ public class ClockView extends View {
     private float centerY;
     private float lineLength;
     private Calendar calendar;
+    private Point mPoint;
 
     public ClockView(Context context) {
         this(context, null);
@@ -43,6 +45,7 @@ public class ClockView extends View {
     public ClockView(Context context, @Nullable AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
 
+        mPoint = new Point();
         paint = PaintFactory.createStrokePaint(Color.BLACK);
         paint.setStrokeWidth(5);
         lineLength = TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 8, getResources().getDisplayMetrics());
@@ -86,19 +89,23 @@ public class ClockView extends View {
         int minute = calendar.get(Calendar.MINUTE);
         int second = calendar.get(Calendar.SECOND);
 
-        drawLine(canvas, 360 / 12 * hour, 0.5f);
-        drawLine(canvas, 360 / 60 * minute, 0.6f);
-        drawLine(canvas, 360 / 60 * second, 0.7f);
+        drawLine(canvas, getPoint(360 / 12 * hour, 0.5f));
+        drawLine(canvas, getPoint(360 / 60 * minute, 0.6f));
+        drawLine(canvas, getPoint(360 / 60 * second, 0.7f));
     }
 
-    private void drawLine(Canvas canvas, int degree, float widthRatio) {
+    private Point getPoint(int degree, float widthRatio){
         double radian = Math.toRadians(degree);
         int endX = (int) (centerX + radius * widthRatio * Math.cos(radian));
         int endY = (int) (centerY + radius * widthRatio * Math.sin(radian));
+        mPoint.set(endX, endY);
+        return mPoint;
+    }
 
+    private void drawLine(Canvas canvas, Point point) {
         canvas.save();
         canvas.rotate(-90, centerX, centerY);
-        canvas.drawLine(centerX, centerY, endX, endY, paint);
+        canvas.drawLine(centerX, centerY, point.x, point.y, paint);
         canvas.restore();
     }
 }

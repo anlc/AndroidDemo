@@ -173,6 +173,13 @@
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".activity.animation.CustomDrawerActivity"
+            android:label="custom drawer">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
