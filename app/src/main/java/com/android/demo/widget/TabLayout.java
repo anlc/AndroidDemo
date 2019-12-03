@@ -11,10 +11,6 @@ import android.graphics.RectF;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
 import android.util.AttributeSet;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -23,6 +19,11 @@ import android.widget.FrameLayout;
 import android.widget.HorizontalScrollView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.viewpager.widget.PagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import com.android.demo.R;
 import com.android.demo.utils.MeasureUtil;
@@ -33,7 +34,9 @@ import com.android.demo.utils.MeasureUtil;
 
 public class TabLayout extends HorizontalScrollView {
 
-    //设置底部的指示条宽度是和字体一样宽，还是和view一样宽
+    /**
+     * 设置底部的指示条宽度是和字体一样宽，还是和view一样宽
+     */
     public static final int MATCH_PARENT = 1;
     public static final int WRAP_CONTENT = 0;
 
@@ -43,7 +46,11 @@ public class TabLayout extends HorizontalScrollView {
 
     private int titleOffset;
     private float density;
-    private int titleColor;//设置标题颜色
+
+    /**
+     * 设置标题颜色
+     */
+    private int titleColor;
 
     public TabLayout(Context context) {
         this(context, null);
