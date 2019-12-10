@@ -22,6 +22,24 @@ class PathActivity : BaseActivity() {
 
         starView.setImageBitmap(createStar())
         pathView.setImageBitmap(createPath())
+        quadView.setImageBitmap(createQuad())
+        quad3View.setImageBitmap(createQuad3())
+    }
+
+    private fun createQuad3(): Bitmap {
+        val path = Path()
+        path.moveTo(100f, 50f)
+        path.cubicTo(200f, 10f, 500f, 500f, 100f, 300f)
+        return drawPath(path, 600, 300)
+    }
+
+    private fun createQuad(): Bitmap {
+        val path = Path()
+
+        path.moveTo(100f, 50f)
+        path.quadTo(200f, 10f, 300f, 300f)
+
+        return drawPath(path, 300, 300)
     }
 
     private fun createPath(): Bitmap {
@@ -31,7 +49,7 @@ class PathActivity : BaseActivity() {
                 floatArrayOf(10f, 30f, 20f, 40f, 30f, 60f, 50f, 100f), Path.Direction.CCW)
         path.addOval(RectF(10f, 110f, 150f, 200f), Path.Direction.CCW)
         path.addArc(RectF(110f, 110f, 250f, 200f), 0f, 60f)
-        return drawPath(path, 500, 500)
+        return drawPath(path, 500, 200)
     }
 
 
