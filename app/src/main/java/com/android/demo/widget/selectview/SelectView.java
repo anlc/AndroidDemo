@@ -5,7 +5,6 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Rect;
-import androidx.annotation.Nullable;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -14,6 +13,8 @@ import android.view.ViewConfiguration;
 import android.view.animation.DecelerateInterpolator;
 import android.widget.Scroller;
 
+import androidx.annotation.Nullable;
+
 import com.android.demo.utils.MeasureUtil;
 import com.android.demo.utils.factory.PaintFactory;
 
@@ -21,7 +22,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created by Administrator on 2018/5/25.
+ *
+ * @author Administrator
+ * @date 2018/5/25
  */
 
 public class SelectView extends View {
@@ -102,7 +105,9 @@ public class SelectView extends View {
             case MotionEvent.ACTION_MOVE:
                 moveY = downY - ev.getRawY();
                 if (Math.abs(moveY) > touchSlop) {
-                    setScrollY((int) (lastTouchY + moveY));
+//                    setScrollY((int) (lastTouchY + moveY));
+                    scrollBy(0, (int) moveY);
+                    downY = ev.getRawY();
                 }
                 break;
             case MotionEvent.ACTION_UP:
@@ -110,6 +115,7 @@ public class SelectView extends View {
                 scroller.startScroll(0, getScrollY(), 0, (int) moveY, 200);
                 invalidate();
                 break;
+            default:
         }
         return super.onTouchEvent(ev);
     }
@@ -120,7 +126,7 @@ public class SelectView extends View {
         if (scroller.computeScrollOffset()) {
             scrollTo(scroller.getCurrX(), scroller.getCurrY());
             postInvalidate();
-        }else{
+        } else {
         }
         super.computeScroll();
     }

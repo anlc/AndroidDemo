@@ -182,7 +182,14 @@
         </activity>
 
         <activity android:name=".activity.animation.PathActivity"
-            android:label="custom drawer">
+            android:label="custom path">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.animation.ClipActivity"
+            android:label="clip demo">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
