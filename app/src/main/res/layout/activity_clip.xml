@@ -5,6 +5,13 @@
     android:orientation="vertical">
 
     <com.android.demo.widget.canvas.ClipView
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <com.android.demo.widget.canvas.lyric.BombView
+        android:id="@+id/bombView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
