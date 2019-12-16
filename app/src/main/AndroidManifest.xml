@@ -139,64 +139,89 @@
 
         <service android:name=".service.LocalService" />
 
-        <activity android:name=".activity.animation.RotationActivity"
+        <activity
+            android:name=".activity.animation.RotationActivity"
             android:label="rotation canvas">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.animation.CanvasActivity"
+        <activity
+            android:name=".activity.animation.CanvasActivity"
             android:label="bitmap canvas">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.animation.ClockActivity"
+        <activity
+            android:name=".activity.animation.ClockActivity"
             android:label="bitmap canvas">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.animation.ScrollerActivity"
+        <activity
+            android:name=".activity.animation.ScrollerActivity"
             android:label="scroller method">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.animation.MultiLauncherActivity"
+        <activity
+            android:name=".activity.animation.MultiLauncherActivity"
             android:label="velocity tracker">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.animation.CustomDrawerActivity"
+        <activity
+            android:name=".activity.animation.CustomDrawerActivity"
             android:label="custom drawer">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.animation.PathActivity"
+        <activity
+            android:name=".activity.animation.PathActivity"
             android:label="custom path">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.animation.ClipActivity"
+        <activity
+            android:name=".activity.animation.ClipActivity"
             android:label="clip demo">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.animation.DrawLineActivity"
-            android:label="clip demo">
+        <activity
+            android:name=".activity.animation.DrawLineActivity"
+            android:label="draw line demo">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.animation.ShaderActivity"
+            android:label="shader demo">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.animation.GradientActivity"
+            android:label="gradient demo">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
