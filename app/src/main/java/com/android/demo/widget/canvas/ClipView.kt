@@ -29,7 +29,7 @@ class ClipView : View {
 
         val path = Path()
         path.addCircle(150f, 150f, 80f, Path.Direction.CCW)
-        canvas.clipPath(path, Region.Op.UNION)
+        canvas.clipPath(path, Region.Op.XOR)
         canvas.drawBitmap(bitmap, 0f, 0f, paint)
     }
 
