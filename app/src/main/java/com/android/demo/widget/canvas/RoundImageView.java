@@ -20,18 +20,20 @@ public class RoundImageView extends View {
 
     private Paint mPaint;
     private Bitmap bitmap;
+    private int bitmapWidth;
 
     public RoundImageView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
 
         mPaint = PaintFactory.createFillPaint(Color.BLACK);
         bitmap = BitmapFactory.decodeResource(getResources(), R.mipmap.timg);
+        bitmapWidth = Math.min(bitmap.getWidth(), bitmap.getHeight());
         mPaint.setShader(new BitmapShader(bitmap, Shader.TileMode.MIRROR, Shader.TileMode.MIRROR));
     }
 
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        canvas.drawCircle(getWidth() / 2, getHeight() / 2, getWidth() / 2, mPaint);
+        canvas.drawCircle(bitmapWidth / 2, bitmapWidth / 2, bitmapWidth / 2, mPaint);
     }
 }
