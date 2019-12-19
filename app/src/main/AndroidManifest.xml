@@ -234,6 +234,14 @@
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".activity.animation.FontMetricsActivity"
+            android:label="font metrics demo">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
