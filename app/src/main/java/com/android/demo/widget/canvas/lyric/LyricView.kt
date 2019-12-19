@@ -6,6 +6,7 @@ import android.graphics.Color
 import android.graphics.Rect
 import android.graphics.RectF
 import android.util.AttributeSet
+import android.util.Log
 import android.view.View
 import com.android.demo.utils.factory.PaintFactory
 
@@ -19,14 +20,16 @@ class LyricView : View {
 
     private var paint = PaintFactory.createStrokePaint(Color.BLACK)
     private var redPaint = PaintFactory.createStrokePaint(Color.RED)
+    private var zoomPaint = PaintFactory.createStrokePaint(Color.BLUE)
     private var centerX = 0f
     private var centerY = 0f
     private val text = "再见只是陌生人"
     private var offset = 0
+    private var step = 2
 
-    constructor(context: Context?) : this(context, null)
-    constructor(context: Context?, attrs: AttributeSet?) : this(context, attrs, 0)
-    constructor(context: Context?, attrs: AttributeSet?, defStyleAttr: Int) : super(context, attrs, defStyleAttr)
+    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {
+        zoomPaint.textSize = 32f
+    }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
         centerX = (w / 2).toFloat()
@@ -67,6 +70,18 @@ class LyricView : View {
         if (offset > textRect.width()) {
             offset = 0
         }
+
+        if (zoomPaint.textSize > 50) {
+            step = -2
+        } else if (zoomPaint.textSize <= 30) {
+            step = 2
+        }
+        zoomPaint.textSize += step
+
+        val measureText = zoomPaint.measureText(text)
+        val x = ((width - measureText).toInt().shr(1)).toFloat()
+        Log.e("lyricView", " width:$width   measureWidth:$measureText  x:$x")
+        canvas.drawText(text, x, centerY + 60, zoomPaint)
     }
 }
 
