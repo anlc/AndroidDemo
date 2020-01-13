@@ -17,7 +17,7 @@ class SweepView : View {
     private val paint = Paint(Paint.ANTI_ALIAS_FLAG)
     private var rotate = 0f
     private val localMatrix = Matrix()
-    private lateinit var shader: SweepGradient
+    private var shader: SweepGradient
 
     constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {
         isFocusable = true
