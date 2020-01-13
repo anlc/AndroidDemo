@@ -139,6 +139,14 @@
 
         <service android:name=".service.LocalService" />
 
+        <activity android:name=".activity.demo.PreferenceDemoActivity"
+            android:label="preference layout demo">
+            <intent-filter>
+                <action android:name="com.android.demo.demo" />
+            </intent-filter>
+        </activity>
+
+        <!-- animation -->
         <activity
             android:name=".activity.animation.RotationActivity"
             android:label="rotation canvas">
