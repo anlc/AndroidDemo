@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.android.demo.widget.selectview.SelectItemView
+        android:id="@+id/select_item_view"
+        android:layout_width="200dp"
+        android:layout_height="500dp"
+        android:background="@color/color_cccccc"
+        app:item_padding="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@color/color_cccccc"
+        app:layout_constraintBottom_toBottomOf="@id/select_item_view"
+        app:layout_constraintRight_toLeftOf="@id/select_item_view"
+        app:layout_constraintTop_toTopOf="@id/select_item_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
