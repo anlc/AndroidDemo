@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/AndroidDemo.iml" filepath="$PROJECT_DIR$/AndroidDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/butter/annotation/annotation.iml" filepath="$PROJECT_DIR$/butter/annotation/annotation.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/butter/butterdemo/butterdemo.iml" filepath="$PROJECT_DIR$/butter/butterdemo/butterdemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/butter/butterknife/butterknife.iml" filepath="$PROJECT_DIR$/butter/butterknife/butterknife.iml" />
-      <module fileurl="file://$PROJECT_DIR$/butter/compiler/compiler.iml" filepath="$PROJECT_DIR$/butter/compiler/compiler.iml" />
-      <module fileurl="file://$PROJECT_DIR$/httpdemo/httpdemo.iml" filepath="$PROJECT_DIR$/httpdemo/httpdemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/butter/runtime/runtime.iml" filepath="$PROJECT_DIR$/butter/runtime/runtime.iml" />
-      <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidDemo.iml" filepath="$PROJECT_DIR$/AndroidDemo.iml" group="AndroidDemo" />
+      <module fileurl="file://$PROJECT_DIR$/butter/annotation/annotation.iml" filepath="$PROJECT_DIR$/butter/annotation/annotation.iml" group="AndroidDemo/annotation" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="AndroidDemo/app" />
+      <module fileurl="file://$PROJECT_DIR$/butter/butterdemo/butterdemo.iml" filepath="$PROJECT_DIR$/butter/butterdemo/butterdemo.iml" group="AndroidDemo/butterdemo" />
+      <module fileurl="file://$PROJECT_DIR$/butter/butterknife/butterknife.iml" filepath="$PROJECT_DIR$/butter/butterknife/butterknife.iml" group="AndroidDemo/butterknife" />
+      <module fileurl="file://$PROJECT_DIR$/butter/compiler/compiler.iml" filepath="$PROJECT_DIR$/butter/compiler/compiler.iml" group="AndroidDemo/compiler" />
+      <module fileurl="file://$PROJECT_DIR$/httpdemo/httpdemo.iml" filepath="$PROJECT_DIR$/httpdemo/httpdemo.iml" group="AndroidDemo/httpdemo" />
+      <module fileurl="file://$PROJECT_DIR$/butter/runtime/runtime.iml" filepath="$PROJECT_DIR$/butter/runtime/runtime.iml" group="AndroidDemo/runtime" />
+      <module fileurl="file://$PROJECT_DIR$/service/service.iml" filepath="$PROJECT_DIR$/service/service.iml" group="AndroidDemo/service" />
     </modules>
   </component>
 </project>

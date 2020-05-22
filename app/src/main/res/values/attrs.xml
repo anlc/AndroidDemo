@@ -43,4 +43,11 @@
         <attr name="item_right_img" />
         <attr name="item_show_bottom_dash" />
     </declare-styleable>
+
+    <declare-styleable name="SelectItemView">
+        <attr name="item_text_color" format="reference|color" />
+        <attr name="item_text_size" format="dimension" />
+        <attr name="item_padding" format="dimension" />
+        <attr name="android:orientation"/>
+    </declare-styleable>
 </resources>

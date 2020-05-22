@@ -103,6 +103,14 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".activity.custom_view.SelectItemViewActivity"
+            android:label="select view2">
+            <intent-filter>
+                <action android:name="com.android.demo.custom" />
+            </intent-filter>
+        </activity>
+
         <!-- design包的使用 -->
         <activity
             android:name=".activity.design.BottomSheetActivity"
