@@ -1,9 +1,13 @@
 package com.android.demo.activity.design;
 
 import android.os.Bundle;
+import android.view.View;
+
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import com.google.android.material.tabs.TabLayout;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.android.demo.R;
@@ -38,4 +42,6 @@ public class CoordinatorLayoutActivity extends BaseActivity {
         viewPager.setAdapter(new FragmentAdapter(getSupportFragmentManager(), fragmentList, tabs));
         tabLayout.setupWithViewPager(viewPager);
     }
+
+
 }
