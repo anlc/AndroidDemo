@@ -14,3 +14,9 @@ project(':butterknife').projectDir = file('butter/butterknife')
 
 include(':runtime')
 project(':runtime').projectDir = file('butter/runtime')
+
+include ':taskremote'
+project(':taskremote').projectDir = file('task/taskremote')
+
+include ':taskdemo'
+project(':taskdemo').projectDir = file('task/taskdemo')

@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.7">
+      <module name="AndroidDemo.app" target="1.8" />
+      <module name="AndroidDemo.butterdemo" target="1.8" />
+      <module name="AndroidDemo.butterknife" target="1.8" />
+      <module name="AndroidDemo.httpdemo" target="1.8" />
+      <module name="AndroidDemo.runtime" target="1.8" />
+      <module name="AndroidDemo.service" target="1.8" />
+      <module name="AndroidDemo.taskdemo" target="1.8" />
+      <module name="AndroidDemo.taskremote" target="1.8" />
       <module name="annotation" target="1.7" />
       <module name="compiler" target="1.7" />
     </bytecodeTargetLevel>

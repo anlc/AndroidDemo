@@ -19,9 +19,12 @@
             <option value="$PROJECT_DIR$/butter/runtime" />
             <option value="$PROJECT_DIR$/httpdemo" />
             <option value="$PROJECT_DIR$/service" />
+            <option value="$PROJECT_DIR$/task/taskdemo" />
+            <option value="$PROJECT_DIR$/task/taskremote" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />
+        <option name="useQualifiedModuleNames" value="true" />
       </GradleProjectSettings>
     </option>
   </component>

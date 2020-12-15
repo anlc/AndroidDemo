@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">TaskDemo</string>
+    <string name="new_flag">new flag</string>
+    <string name="clear_top">clear top</string>
+    <string name="standard">standard</string>
+    <string name="clear_task">clear task</string>
+    <string name="single_top">single_top</string>
+    <string name="single_instance">single_instance</string>
+    <string name="single_task">single_task</string>
+    <string name="start_remote">start remote</string>
+</resources>
