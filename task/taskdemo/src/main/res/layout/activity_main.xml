@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <CheckBox
+        android:id="@+id/cb_start_remote"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/start_remote"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cb_new_task" />
+
+    <CheckBox
+        android:id="@+id/cb_new_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/new_flag"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cb_clear_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_top"
+        app:layout_constraintStart_toEndOf="@id/cb_new_task"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <CheckBox
+        android:id="@+id/cb_clear_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_task"
+        app:layout_constraintStart_toEndOf="@id/cb_clear_top"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_start_standard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/standard"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_start_single_top"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/single_top"
+        app:layout_constraintBottom_toBottomOf="@id/btn_start_standard"
+        app:layout_constraintStart_toEndOf="@id/btn_start_standard"
+        app:layout_constraintTop_toTopOf="@id/btn_start_standard" />
+
+    <Button
+        android:id="@+id/btn_start_single_task"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/single_task"
+        app:layout_constraintBottom_toTopOf="@id/btn_start_standard"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btn_start_single_instance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/single_instance"
+        app:layout_constraintStart_toEndOf="@id/btn_start_single_task"
+        app:layout_constraintTop_toTopOf="@id/btn_start_single_task" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

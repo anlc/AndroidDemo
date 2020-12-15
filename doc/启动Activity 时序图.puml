@@ -1,0 +1,48 @@
+@startuml
+
+actor user
+participant MainActivity
+participant StandardActivity
+participant System
+
+=== events am_ ==
+user -> MainActivity: 点击启动StandardActivity
+MainActivity -> System: StartActivity
+System -> StandardActivity: am_create_activity
+System -> StandardActivity: am_focused_activity
+System -> MainActivity: am_pause_activity
+System -> MainActivity: am_on_paused_called
+System -> StandardActivity: am_restart_activity
+System -> StandardActivity: am_on_resume_called
+System -> StandardActivity: am_activity_launch_time
+System -> MainActivity: am_stop_activity
+System -> MainActivity: am_on_stop_called
+
+user -> StandardActivity: 点击返回
+StandardActivity -> System: finish
+System -> StandardActivity: am_finish_activity
+System -> MainActivity: am_focused_activity
+System -> StandardActivity: am_pause_activity
+System -> StandardActivity: am_on_paused_called
+System -> MainActivity: am_resume_activity
+System -> MainActivity: am_on_resume_called
+System -> StandardActivity: am_destroy_activity
+System -> StandardActivity: am_on_stop_called
+
+=== log ==
+user -> MainActivity: 点击启动StandardActivity
+MainActivity -> System: StartActivity
+System -> MainActivity: onPause
+System -> StandardActivity: onCreate
+System -> StandardActivity: onResume
+System -> MainActivity: onStop
+
+user -> StandardActivity: 点击返回
+StandardActivity -> System: finish
+System -> StandardActivity: onPause
+System -> MainActivity: onRestart
+System -> MainActivity: onResume
+System -> StandardActivity: onStop
+System -> StandardActivity: onDestroy
+
+@enduml
