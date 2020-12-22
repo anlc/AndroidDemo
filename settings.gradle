@@ -1,22 +1,22 @@
 include ':app', ':service', ':httpdemo'
 
-include(':compiler')
-project(':compiler').projectDir = file('butter/compiler')
+include(':butter:compiler')
+project(':butter:compiler').projectDir = file('butter/compiler')
 
-include(':annotation')
-project(':annotation').projectDir = file('butter/annotation')
+include(':butter:annotation')
+project(':butter:annotation').projectDir = file('butter/annotation')
 
-include(':butterdemo')
-project(':butterdemo').projectDir = file('butter/butterdemo')
+include(':butter:butterdemo')
+project(':butter:butterdemo').projectDir = file('butter/butterdemo')
 
-include(':butterknife')
-project(':butterknife').projectDir = file('butter/butterknife')
+include(':butter:butterknife')
+project(':butter:butterknife').projectDir = file('butter/butterknife')
 
-include(':runtime')
-project(':runtime').projectDir = file('butter/runtime')
+include(':butter:runtime')
+project(':butter:runtime').projectDir = file('butter/runtime')
 
-include ':taskremote'
-project(':taskremote').projectDir = file('task/taskremote')
+include ':task:taskremote'
+project(':task:taskremote').projectDir = file('task/taskremote')
 
-include ':taskdemo'
-project(':taskdemo').projectDir = file('task/taskdemo')
+include ':task:taskdemo'
+project(':task:taskdemo').projectDir = file('task/taskdemo')

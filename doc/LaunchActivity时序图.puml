@@ -1,0 +1,91 @@
+@startuml
+
+participant ActivityThread
+participant Instrumentation
+participant Activity
+
+=== onCreate / onStart ==
+ActivityThread -> ActivityThread: mH#handleMessage():LAUNCH_ACTIVITY
+ActivityThread -> ActivityThread: handleLaunchActivity()
+
+ActivityThread -> ActivityThread: performLaunchActivity()
+activate ActivityThread
+    ActivityThread -> Instrumentation: callActivityOnCreate()
+    Instrumentation -> Activity: performCreate()
+    Activity -> Activity: performCreate()
+    Activity -> Activity: onCreate()
+
+    alt if (!r.activity.mFinished)
+        ActivityThread -> Activity: performStart()
+        Activity -> Instrumentation: callActivityOnStart()
+        Instrumentation -> Activity: onStart()
+    end
+deactivate ActivityThread
+
+=== onResume / onRestart ==
+ActivityThread -> ActivityThread: mH#handleMessage():RESUME_ACTIVITY
+ActivityThread -> ActivityThread: handleResumeActivity()
+ActivityThread -> ActivityThread: performResumeActivity()
+ActivityThread -> Activity: performResume()
+Activity -> Activity: performRestart()
+alt 是否停止过：if (mStopped)
+    Activity -> Activity: performRestart()
+    Activity -> Instrumentation: callActivityOnRestart()
+    Instrumentation -> Activity: onRestart()
+end
+Activity -> Instrumentation: callActivityOnResume()
+Instrumentation -> Activity: onResume()
+
+
+=== onPause ==
+ActivityThread -> ActivityThread: mH#handleMessage():PAUSE_ACTIVITY
+ActivityThread -> ActivityThread: handlePauseActivity()
+ActivityThread -> ActivityThread: performPauseActivity()
+ActivityThread -> ActivityThread: performPauseActivity()
+ActivityThread -> ActivityThread: performPauseActivityIfNeeded()
+ActivityThread -> Instrumentation: callActivityOnPause()
+Instrumentation -> Activity: performPause()
+Activity -> Activity: onPause()
+
+=== onStop(页面处于后台时) ==
+ActivityThread -> ActivityThread: mH#handleMessage():STOP_ACTIVITY_SHOW
+ActivityThread -> ActivityThread: handleStopActivity()
+ActivityThread -> ActivityThread: performStopActivityInner()
+ActivityThread -> ActivityThread: performPauseActivityIfNeeded()
+activate ActivityThread
+    alt 如果未暂停
+        ActivityThread -> Instrumentation: callActivityOnPause()
+        Instrumentation -> Activity: performPause()
+        Activity -> Activity: onPause()
+    end
+    alt if (!r.stopped)
+        ActivityThread -> Activity: performStop()
+        Activity -> Instrumentation: callActivityOnStop()
+        Activity -> Instrumentation: callActivityOnStop()
+        Instrumentation -> Activity: onStop()
+    end
+deactivate ActivityThread
+
+=== onDestroy ==
+ActivityThread -> ActivityThread: mH#handleMessage():DESTROY_ACTIVITY
+ActivityThread -> ActivityThread: handleDestroyActivity()
+ActivityThread -> ActivityThread: performDestroyActivity()
+ActivityThread -> ActivityThread: performPauseActivityIfNeeded()
+activate ActivityThread
+    alt 如果未暂停
+        ActivityThread -> Instrumentation: callActivityOnPause()
+        Instrumentation -> Activity: performPause()
+        Activity -> Activity: onPause()
+    end
+    alt if (!r.stopped)
+        ActivityThread -> Activity: performStop()
+        Activity -> Instrumentation: callActivityOnStop()
+        Activity -> Instrumentation: callActivityOnStop()
+        Instrumentation -> Activity: onStop()
+    end
+    ActivityThread -> Instrumentation: callActivityOnDestroy()
+    Instrumentation -> Activity: performDestroy()
+    Activity -> Activity: onDestroy()
+deactivate ActivityThread
+
+@enduml
