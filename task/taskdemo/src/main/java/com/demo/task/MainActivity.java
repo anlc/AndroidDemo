@@ -103,36 +103,42 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        Log.d(TAG, "onNewIntent: " + getClass().getSimpleName());
+        Log.d(TAG, "onNewIntent: " + getClass().getSimpleName(), new Throwable());
     }
 
     @Override
     protected void onRestart() {
         super.onRestart();
-        Log.d(TAG, "onRestart: " + getClass().getSimpleName());
+        Log.d(TAG, "onRestart: " + getClass().getSimpleName(), new Throwable());
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.d(TAG, "onStart: " + getClass().getSimpleName(), new Throwable());
     }
 
     @Override
     protected void onResume() {
         super.onResume();
-        Log.d(TAG, "onResume: " + getClass().getSimpleName());
+        Log.d(TAG, "onResume: " + getClass().getSimpleName(), new Throwable());
     }
 
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, "onPause: " + getClass().getSimpleName());
+        Log.d(TAG, "onPause: " + getClass().getSimpleName(), new Throwable());
     }
 
     @Override
     protected void onStop() {
         super.onStop();
-        Log.d(TAG, "onStop: " + getClass().getSimpleName());
+        Log.d(TAG, "onStop: " + getClass().getSimpleName(), new Throwable());
     }
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "onDestroy: " + getClass().getSimpleName());
+        Log.d(TAG, "onDestroy: " + getClass().getSimpleName(), new Throwable());
     }
 }

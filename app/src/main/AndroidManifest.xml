@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.android.demo">
 
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+
     <application
         android:name=".base.CustomApplication"
         android:allowBackup="true"
@@ -162,6 +164,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activity.demo.BroadcastReceiverActivity"
+            android:label="broadcast receiver demo">
+            <intent-filter>
+                <action android:name="com.android.demo.demo" />
+            </intent-filter>
+        </activity>
+
         <!-- animation -->
         <activity
             android:name=".activity.animation.RotationActivity"
@@ -266,6 +275,12 @@
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
         </activity>
+
+        <receiver android:name=".activity.demo.BroadcastReceiverActivity$OrderBroadcastReceiver">
+            <intent-filter android:priority="1">
+                <action android:name="order_broad"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

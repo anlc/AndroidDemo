@@ -40,7 +40,7 @@
         <attr name="item_value_size" />
         <attr name="item_show_arrow" />
         <attr name="item_show_bottom_line" />
-        <attr name="item_right_img" />
+        <attr name="item_right_img" format="reference" />
         <attr name="item_show_bottom_dash" />
     </declare-styleable>
 
@@ -48,6 +48,6 @@
         <attr name="item_text_color" format="reference|color" />
         <attr name="item_text_size" format="dimension" />
         <attr name="item_padding" format="dimension" />
-        <attr name="android:orientation"/>
+        <attr name="android:orientation" />
     </declare-styleable>
 </resources>

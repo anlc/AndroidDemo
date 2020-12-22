@@ -3,11 +3,16 @@
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="1.7">
       <module name="AndroidDemo.app" target="1.8" />
+      <module name="AndroidDemo.butter.butterdemo" target="1.8" />
+      <module name="AndroidDemo.butter.butterknife" target="1.8" />
+      <module name="AndroidDemo.butter.runtime" target="1.8" />
       <module name="AndroidDemo.butterdemo" target="1.8" />
       <module name="AndroidDemo.butterknife" target="1.8" />
       <module name="AndroidDemo.httpdemo" target="1.8" />
       <module name="AndroidDemo.runtime" target="1.8" />
       <module name="AndroidDemo.service" target="1.8" />
+      <module name="AndroidDemo.task.taskdemo" target="1.8" />
+      <module name="AndroidDemo.task.taskremote" target="1.8" />
       <module name="AndroidDemo.taskdemo" target="1.8" />
       <module name="AndroidDemo.taskremote" target="1.8" />
       <module name="annotation" target="1.7" />

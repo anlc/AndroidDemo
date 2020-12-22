@@ -12,6 +12,7 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/butter" />
             <option value="$PROJECT_DIR$/butter/annotation" />
             <option value="$PROJECT_DIR$/butter/butterdemo" />
             <option value="$PROJECT_DIR$/butter/butterknife" />
@@ -19,6 +20,7 @@
             <option value="$PROJECT_DIR$/butter/runtime" />
             <option value="$PROJECT_DIR$/httpdemo" />
             <option value="$PROJECT_DIR$/service" />
+            <option value="$PROJECT_DIR$/task" />
             <option value="$PROJECT_DIR$/task/taskdemo" />
             <option value="$PROJECT_DIR$/task/taskremote" />
           </set>
