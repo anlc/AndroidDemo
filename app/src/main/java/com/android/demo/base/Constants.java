@@ -16,4 +16,6 @@ public class Constants {
     public static final String ACTION_APP_DEMO = "com.android.demo.demo";
     //动画 类型的 action
     public static final String ACTION_ANIMATION = "com.android.demo.animation";
+    //jetpack 类型的 action
+    public static final String ACTION_JETPACK = "com.android.demo.jetpack";
 }

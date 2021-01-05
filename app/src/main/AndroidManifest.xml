@@ -55,6 +55,14 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".activity.JetpackActivity"
+            android:label="jetpack demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
         <!-- 自定义view类型 -->
         <activity
             android:name=".activity.custom_view.LuckActivity"
@@ -157,14 +165,16 @@
 
         <service android:name=".service.LocalService" />
 
-        <activity android:name=".activity.demo.PreferenceDemoActivity"
+        <activity
+            android:name=".activity.demo.PreferenceDemoActivity"
             android:label="preference layout demo">
             <intent-filter>
                 <action android:name="com.android.demo.demo" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.demo.BroadcastReceiverActivity"
+        <activity
+            android:name=".activity.demo.BroadcastReceiverActivity"
             android:label="broadcast receiver demo">
             <intent-filter>
                 <action android:name="com.android.demo.demo" />
@@ -276,9 +286,34 @@
             </intent-filter>
         </activity>
 
+        <!-- jetpack -->
+        <activity
+            android:name=".activity.jetpack.DataBindingActivity"
+            android:label="data binding">
+            <intent-filter>
+                <action android:name="com.android.demo.jetpack" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.jetpack.ObservableJavaActivity"
+            android:label="observable java">
+            <intent-filter>
+                <action android:name="com.android.demo.jetpack" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.jetpack.ObservableActivity"
+            android:label="observable kotlin">
+            <intent-filter>
+                <action android:name="com.android.demo.jetpack" />
+            </intent-filter>
+        </activity>
+
         <receiver android:name=".activity.demo.BroadcastReceiverActivity$OrderBroadcastReceiver">
             <intent-filter android:priority="1">
-                <action android:name="order_broad"/>
+                <action android:name="order_broad" />
             </intent-filter>
         </receiver>
     </application>
