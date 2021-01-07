@@ -71,7 +71,7 @@ public class DataBindingActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         ActivityDataDindingBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_data_dinding);
         mName = new UserName("三年二班");
-        binding.setVariable(BR.name, mName);
+        binding.setUser(mName);
 
         findViewById(R.id.tv_name).setOnClickListener(new View.OnClickListener() {
             @Override
