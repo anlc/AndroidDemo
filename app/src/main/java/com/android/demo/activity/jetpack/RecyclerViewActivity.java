@@ -1,7 +1,9 @@
 package com.android.demo.activity.jetpack;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,6 +19,8 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.android.demo.R;
+import com.android.demo.activity.demo.Intent2Activity;
+import com.android.demo.activity.demo.IntentActivity;
 import com.android.demo.databinding.ActivityRecyclerViewBinding;
 import com.android.demo.databinding.LayoutImageListBinding;
 import com.bumptech.glide.Glide;
@@ -35,6 +39,8 @@ import java.util.List;
  */
 public class RecyclerViewActivity extends AppCompatActivity {
 
+    private static final String TAG = "RecyclerViewActivity";
+
     @Override
     protected void onCreate(@Nullable final Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,6 +50,8 @@ public class RecyclerViewActivity extends AppCompatActivity {
         Adapter adapter = new Adapter(this, dbResponse.getEmployee());
         binding.viewEmployees.setLayoutManager(new LinearLayoutManager(this));
         binding.viewEmployees.setAdapter(adapter);
+
+
     }
 
     static class Adapter extends RecyclerView.Adapter<Holder> {
@@ -169,6 +177,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
         // important code for loading image here
         @BindingAdapter({"avatar"})
         public static void loadImage(ImageView imageView, String imageURL) {
+            Log.d(TAG, "loadImage: " + imageURL);
             Glide.with(imageView.getContext())
                     .setDefaultRequestOptions(new RequestOptions().circleCrop())
                     .load(imageURL)

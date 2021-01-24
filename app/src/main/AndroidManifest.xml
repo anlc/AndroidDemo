@@ -182,6 +182,22 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".activity.demo.IntentActivity"
+            android:label="intent test">
+            <intent-filter>
+                <action android:name="com.android.demo.demo" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".activity.demo.Intent2Activity"
+            android:label="intent test">
+            <intent-filter>
+                <action android:name="com.android.demo.demo" />
+            </intent-filter>
+        </activity>
+
         <!-- animation -->
         <activity
             android:name=".activity.animation.RotationActivity"
