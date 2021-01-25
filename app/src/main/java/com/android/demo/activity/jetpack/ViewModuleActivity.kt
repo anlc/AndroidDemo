@@ -22,8 +22,6 @@ class ViewModuleActivity : AppCompatActivity() {
 
         viewModelData = ViewModelProviders.of(this).get(ViewModelData::class.java)
 
-        viewModelData = ViewModelProvider
-
         textView.setOnClickListener {
             viewModelData.number++
             updateText()
@@ -35,4 +33,6 @@ class ViewModuleActivity : AppCompatActivity() {
     }
 
     class ViewModelData(var number: Int) : ViewModel()
+
+//    class AndroidModelTest() : Android
 }

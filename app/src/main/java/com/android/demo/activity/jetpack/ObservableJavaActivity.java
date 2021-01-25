@@ -6,7 +6,6 @@ import android.view.View;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
-import androidx.databinding.Observable;
 import androidx.databinding.ObservableField;
 import androidx.databinding.ObservableInt;
 
@@ -40,12 +39,12 @@ public class ObservableJavaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         final ActivityViewModelBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_view_model);
 
-        mTitle.addOnPropertyChangedCallback(new Observable.OnPropertyChangedCallback() {
-            @Override
-            public void onPropertyChanged(Observable sender, int propertyId) {
-                binding.setTitle("7890");
-            }
-        });
+//        mTitle.addOnPropertyChangedCallback(new Observable.OnPropertyChangedCallback() {
+//            @Override
+//            public void onPropertyChanged(Observable sender, int propertyId) {
+//                binding.setTitle("7890");
+//            }
+//        });
 
         binding.setObservableFieldBean(mField);
 

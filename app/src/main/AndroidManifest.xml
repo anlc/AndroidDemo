@@ -327,8 +327,16 @@
                 <action android:name="com.android.demo.jetpack" />
             </intent-filter>
         </activity>
+
         <activity android:name=".activity.jetpack.RecyclerViewActivity"
             android:label="data binding glide load image">
+            <intent-filter>
+                <action android:name="com.android.demo.jetpack" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.jetpack.LiveDataActivity"
+            android:label="live data demo">
             <intent-filter>
                 <action android:name="com.android.demo.jetpack" />
             </intent-filter>
