@@ -19,7 +19,7 @@ class Intent2Activity : AppCompatActivity() {
         setContentView(TextView(this).also { it.text = "目标页面" })
 
         val stringExtra = intent.getStringExtra("intent_data")
-        Log.d(Companion.TAG, "onCreate: $stringExtra)
+        Log.d(Companion.TAG, "onCreate: $stringExtra")
     }
 
     companion object {
