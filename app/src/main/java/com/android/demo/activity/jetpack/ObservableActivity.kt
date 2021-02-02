@@ -16,22 +16,18 @@ import com.android.demo.databinding.ActivityViewModelBinding
  */
 class ObservableActivity : AppCompatActivity() {
 
-    private val mTitle = ObservableField<String>()
     private val mField = ObservableJavaActivity.ObservableFieldBean("item", ObservableInt(0))
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val binding: ActivityViewModelBinding = DataBindingUtil.setContentView(this, R.layout.activity_view_model)
 
-        mTitle.set("default title")
-        binding.title = mTitle.get()
-        binding.observableFieldBean = mField
+        binding.data = mField
 
-        binding.tvTitle.setOnClickListener {
-//            mTitle.set("xxx" + mField.count.get())
-            mField.name = ("item" + mField.count.get())
-            mField.count.set(mField.count.get() + 1)
-        }
+//        binding.tvTitle.setOnClickListener {
+//            mField.name = "item" + mField.count.get()
+//            mField.count.set(mField.count.get() + 1)
+//        }
     }
 
 }

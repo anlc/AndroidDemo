@@ -342,6 +342,20 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activity.jetpack.CustomViewBindingActivity"
+            android:label="custom view">
+            <intent-filter>
+                <action android:name="com.android.demo.jetpack" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.jetpack.SimpleLiveDataActivity"
+            android:label="simple live data">
+            <intent-filter>
+                <action android:name="com.android.demo.jetpack" />
+            </intent-filter>
+        </activity>
+
         <receiver android:name=".activity.demo.BroadcastReceiverActivity$OrderBroadcastReceiver">
             <intent-filter android:priority="1">
                 <action android:name="order_broad" />

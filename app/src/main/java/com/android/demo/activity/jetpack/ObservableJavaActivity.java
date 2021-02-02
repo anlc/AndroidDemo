@@ -21,38 +21,30 @@ import com.android.demo.databinding.ActivityViewModelBinding;
 public class ObservableJavaActivity extends AppCompatActivity {
 
     public static class ObservableFieldBean {
-        public String name;
+        public ObservableField<String> name;
         public ObservableInt count;
 
         public ObservableFieldBean(String name, ObservableInt count) {
-            this.name = name;
+            this.name = new ObservableField<>(name);
             this.count = count;
         }
-
     }
 
-    private ObservableField<String> mTitle = new ObservableField<>();
-    private static ObservableFieldBean mField = new ObservableFieldBean("item", new ObservableInt(0));
+    private ObservableFieldBean mField = new ObservableFieldBean("item", new ObservableInt(0));
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         final ActivityViewModelBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_view_model);
 
-//        mTitle.addOnPropertyChangedCallback(new Observable.OnPropertyChangedCallback() {
-//            @Override
-//            public void onPropertyChanged(Observable sender, int propertyId) {
-//                binding.setTitle("7890");
-//            }
-//        });
-
-        binding.setObservableFieldBean(mField);
+        binding.setData(mField);
+        binding.setLifecycleOwner(this);
 
         binding.tvTitle.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                mTitle.set("xxx" + mField.count.get());
                 mField.count.set(mField.count.get() + 1);
+                mField.name.set("item == " + mField.count.get());
             }
         });
     }
