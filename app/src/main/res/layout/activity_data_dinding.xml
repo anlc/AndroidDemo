@@ -5,8 +5,8 @@
     <data>
 
         <variable
-            name="dataBindingEvents"
-            type="com.android.demo.activity.jetpack.DataBindingActivity" />
+            name="events"
+            type="com.android.demo.activity.jetpack.DataBindingActivity.Events" />
 
         <variable
             name="user"
@@ -25,6 +25,7 @@
             android:text="@{user.name, default=name}"
             tools:text="@{user.name, default=name}"
             android:textColor="@android:color/black"
+            android:onClick="@{events::onNameClick}"
             android:textSize="16sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

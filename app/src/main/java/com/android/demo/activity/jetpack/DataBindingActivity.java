@@ -31,7 +31,7 @@ import java.util.List;
  * @date 2021/1/5
  */
 public class DataBindingActivity extends AppCompatActivity {
-
+    
     public static class UserName extends BaseObservable {
         public String name;
 
@@ -47,6 +47,7 @@ public class DataBindingActivity extends AppCompatActivity {
         public void setName(String name) {
             this.name = name;
             notifyPropertyChanged(BR.name);
+
         }
     }
 
@@ -57,6 +58,12 @@ public class DataBindingActivity extends AppCompatActivity {
         public DataBean(String name, int age) {
             this.name = name;
             this.age = age;
+        }
+    }
+
+    public class Events{
+        public void onNameClick(View view) {
+
         }
     }
 

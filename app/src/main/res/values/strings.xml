@@ -5,4 +5,5 @@
     <string name="scroller_test">Scroller Test</string>
     <string name="send_normal">发送无序广播</string>
     <string name="send_orden">发送有序广播</string>
+    <string name="refresh">刷新</string>
 </resources>
