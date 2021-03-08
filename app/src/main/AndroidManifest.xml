@@ -356,6 +356,13 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".activity.jetpack.ObservableTestActivity"
+            android:label="simple observable test">
+            <intent-filter>
+                <action android:name="com.android.demo.jetpack" />
+            </intent-filter>
+        </activity>
+
         <receiver android:name=".activity.demo.BroadcastReceiverActivity$OrderBroadcastReceiver">
             <intent-filter android:priority="1">
                 <action android:name="order_broad" />
