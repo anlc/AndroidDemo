@@ -10,6 +10,7 @@
       <module name="AndroidDemo.butterknife" target="1.8" />
       <module name="AndroidDemo.httpdemo" target="1.8" />
       <module name="AndroidDemo.jetpack" target="1.8" />
+      <module name="AndroidDemo.player" target="1.8" />
       <module name="AndroidDemo.runtime" target="1.8" />
       <module name="AndroidDemo.service" target="1.8" />
       <module name="AndroidDemo.task.taskdemo" target="1.8" />
