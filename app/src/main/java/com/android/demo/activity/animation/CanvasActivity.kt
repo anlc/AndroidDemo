@@ -36,7 +36,7 @@ class CanvasActivity : BaseActivity() {
         paint.color = Color.RED
         paint.strokeWidth = 3f
         canvas.drawArc(rectF, -30f, 30f, false, paint)
-        arcImageView.setImageBitmap(bitmap)
+//        arcImageView.setImageBitmap(bitmap)
     }
 
     private fun drawRoundImageView() {
