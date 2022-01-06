@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2021/1/24
  */
 class NavigationActivity : AppCompatActivity() {

@@ -20,7 +20,7 @@ import java.util.TimerTask;
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019-11-04
  */
 public class ClockView extends View {

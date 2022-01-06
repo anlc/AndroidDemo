@@ -34,7 +34,7 @@ import java.util.List;
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2021/1/6
  */
 public class RecyclerViewActivity extends AppCompatActivity {

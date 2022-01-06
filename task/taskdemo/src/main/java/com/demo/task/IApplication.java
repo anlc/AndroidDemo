@@ -13,7 +13,7 @@ import androidx.lifecycle.ProcessLifecycleOwner;
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2020/11/23
  */
 public class IApplication extends Application implements LifecycleEventObserver {

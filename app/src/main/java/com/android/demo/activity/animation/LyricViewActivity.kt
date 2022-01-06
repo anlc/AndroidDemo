@@ -9,7 +9,7 @@ import java.util.*
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019-12-18
  */
 class LyricViewActivity : BaseActivity(){

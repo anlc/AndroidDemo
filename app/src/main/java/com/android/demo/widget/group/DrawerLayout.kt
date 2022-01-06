@@ -11,7 +11,7 @@ import android.widget.Scroller
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019-12-02
  */
 class DrawerLayout : ViewGroup {

@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.activity_custom_drawer.*
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019-12-03
  */
 class CustomDrawerActivity : BaseActivity (){

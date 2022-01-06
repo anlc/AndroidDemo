@@ -13,7 +13,7 @@ import com.android.demo.databinding.ActivitySimpleLiveDataBinding;
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2021/2/1
  */
 public class SimpleLiveDataActivity extends AppCompatActivity {

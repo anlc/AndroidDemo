@@ -12,7 +12,7 @@ import com.android.demo.utils.factory.PaintFactory
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019-12-19
  */
 class FontMetricsView : View {

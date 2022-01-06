@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.activity_path.*
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019-10-04
  */
 

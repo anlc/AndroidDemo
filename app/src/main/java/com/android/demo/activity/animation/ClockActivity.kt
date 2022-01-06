@@ -7,7 +7,7 @@ import com.android.demo.base.BaseActivity
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019-11-04
  */
 class ClockActivity : BaseActivity() {

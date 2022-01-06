@@ -8,7 +8,7 @@ import kotlinx.android.synthetic.main.activity_multi_launcher.*
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019-11-27
  */
 class MultiLauncherActivity : BaseActivity() {

@@ -8,7 +8,7 @@ import org.junit.Test;
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019-10-15
  */
 public class GsonTest {

@@ -13,7 +13,7 @@ import com.android.demo.utils.factory.PaintFactory;
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019-06-12
  */
 public class RotationView extends View {

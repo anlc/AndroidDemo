@@ -9,7 +9,7 @@ import com.android.demo.base.ManifestActivity;
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019-06-12
  */
 public class AnimationActivity extends ManifestActivity {

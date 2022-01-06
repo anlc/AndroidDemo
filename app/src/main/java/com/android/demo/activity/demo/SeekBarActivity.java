@@ -9,7 +9,7 @@ import com.android.demo.R;
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019/1/26
  */
 public class SeekBarActivity extends FragmentActivity {

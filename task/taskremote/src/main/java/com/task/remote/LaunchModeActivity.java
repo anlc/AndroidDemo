@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2020/11/26
  */
 public class LaunchModeActivity extends AppCompatActivity {

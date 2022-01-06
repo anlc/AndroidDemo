@@ -11,7 +11,7 @@ import com.android.demo.databinding.ActivityViewModelBinding
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2021/1/5
  */
 class ObservableActivity : AppCompatActivity() {

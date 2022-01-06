@@ -14,7 +14,7 @@ import com.android.demo.databinding.ActivityObservableTestBinding;
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2021/2/23
  */
 public class ObservableTestActivity extends AppCompatActivity {

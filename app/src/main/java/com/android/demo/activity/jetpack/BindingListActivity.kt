@@ -18,7 +18,7 @@ import com.android.demo.databinding.ItemBindingListBinding
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2021/2/3
  */
 class BindingListActivity : AppCompatActivity() {

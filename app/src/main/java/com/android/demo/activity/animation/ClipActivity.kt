@@ -10,7 +10,7 @@ import java.util.*
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019-12-10
  */
 class ClipActivity : BaseActivity(){

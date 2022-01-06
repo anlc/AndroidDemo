@@ -9,7 +9,7 @@ import android.view.View
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019-12-17
  */
 class SweepView : View {

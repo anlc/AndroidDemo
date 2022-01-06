@@ -14,7 +14,7 @@ import kotlin.properties.Delegates
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019-11-28
  */
 class MultiLauncherLayout : ViewGroup {

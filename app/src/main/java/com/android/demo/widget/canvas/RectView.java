@@ -17,7 +17,7 @@ import com.android.demo.utils.factory.PaintFactory;
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019-09-30
  */
 public class RectView extends View {

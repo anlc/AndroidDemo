@@ -13,7 +13,7 @@ import com.android.demo.R;
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2021/1/26
  */
 public class CustomViewBindingActivity extends AppCompatActivity {

@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2020/5/19
  */
 public class SelectItemView extends FrameLayout {

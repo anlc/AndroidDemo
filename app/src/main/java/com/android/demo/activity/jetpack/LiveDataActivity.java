@@ -19,7 +19,7 @@ import com.android.demo.databinding.ActivityLiveDataBinding;
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2021/1/5
  */
 public class LiveDataActivity extends AppCompatActivity {

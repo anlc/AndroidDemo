@@ -11,7 +11,7 @@ import com.android.demo.R
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2019-11-27
  */
 class ScrollerViewGroup : ViewGroup {

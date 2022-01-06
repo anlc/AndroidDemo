@@ -17,7 +17,7 @@ import com.android.demo.R;
 /**
  * <p>
  *
- * @author v_anlaochou
+ * @author anlc
  * @date 2020/12/18
  */
 public class BroadcastReceiverActivity extends AppCompatActivity implements View.OnClickListener {
