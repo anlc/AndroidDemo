@@ -35,7 +35,7 @@ public class LocalService extends Service {
         return new LocalBinder();
     }
 
-    public class LocalBinder extends Binder {
+    public static class LocalBinder extends Binder {
 
         public void getString() {
             Log.d(TAG, "  ----->  getString");

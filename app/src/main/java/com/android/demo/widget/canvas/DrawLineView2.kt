@@ -16,24 +16,22 @@ import com.android.demo.utils.factory.PaintFactory
  * @author anlc
  * @date 2019-12-16
  */
-class DrawLineView2 : View {
+class DrawLineView2(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
 
     private val paint = PaintFactory.createStrokePaint(Color.BLACK)
     private var prevX = 0f
     private var prevY = 0f
     private val path = Path()
-    private var bitmap: Bitmap? = null
+    private lateinit var bitmap: Bitmap
     private var bitmapCanvas: Canvas? = null
 
-    constructor(context: Context?, attrs: AttributeSet?) : super(context, attrs) {
+    init {
         paint.strokeWidth = 3f
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
-        if (bitmap == null) {
-            bitmap = Bitmap.createBitmap(measuredWidth, measuredHeight, Bitmap.Config.ARGB_8888)
-            bitmapCanvas = Canvas(bitmap)
-        }
+        bitmap = Bitmap.createBitmap(measuredWidth, measuredHeight, Bitmap.Config.ARGB_8888)
+        bitmapCanvas = Canvas(bitmap)
     }
 
     override fun onDraw(canvas: Canvas) {

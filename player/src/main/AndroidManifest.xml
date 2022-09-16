@@ -9,15 +9,24 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDemo">
-        <activity android:name=".MainActivity">
+        <activity
+          android:exported="true"
+          android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ExoPlayActivity" />
-        <activity android:name=".IjkPlayActivity" />
+        <activity
+          android:exported="true"
+          android:name=".ExoPlayActivity" />
+
+        <activity
+          android:exported="true"
+          android:name=".IjkPlayActivity" />
+
     </application>
 
 </manifest>

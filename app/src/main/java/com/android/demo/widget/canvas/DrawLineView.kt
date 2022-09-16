@@ -19,7 +19,7 @@ import com.android.demo.utils.factory.PaintFactory
 class DrawLineView : View {
 
     private val paint = PaintFactory.createStrokePaint(Color.BLACK)
-    private var bitmap: Bitmap? = null
+    private lateinit var bitmap: Bitmap
     private var bitmapCanvas: Canvas? = null
 
     private var prevX = 0f

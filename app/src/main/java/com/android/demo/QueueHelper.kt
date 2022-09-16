@@ -40,7 +40,7 @@ class QueueHelper {
     }
 
     class InnerHandler : Handler() {
-        override fun handleMessage(msg: Message?) {
+        override fun handleMessage(msg: Message) {
             msg.let {
                 val obj = it?.obj
                 if (obj !is WeakReference<*>) {

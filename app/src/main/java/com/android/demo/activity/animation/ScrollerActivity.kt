@@ -1,9 +1,10 @@
 package com.android.demo.activity.animation
 
 import android.os.Bundle
+import android.view.View
 import com.android.demo.R
 import com.android.demo.base.BaseActivity
-import kotlinx.android.synthetic.main.activity_scroller.*
+import com.android.demo.widget.group.ScrollerViewGroup
 
 /**
  * <p>
@@ -17,8 +18,9 @@ class ScrollerActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_scroller)
 
-        btnScrollBy.setOnClickListener { textView.start() }
-        btnScrollTo.setOnClickListener { textView.stop() }
+        val textView = findViewById<ScrollerViewGroup>(R.id.textView)
+        findViewById<View>(R.id.btnScrollBy).setOnClickListener { textView.start() }
+        findViewById<View>(R.id.btnScrollTo).setOnClickListener { textView.stop() }
     }
 
 }

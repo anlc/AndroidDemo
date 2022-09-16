@@ -8,3 +8,5 @@
 /build
 /captures
 .externalNativeBuild
+*.class
+butter/compiler/bin/*

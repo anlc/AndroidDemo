@@ -6,9 +6,11 @@ import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.util.Log;
 import android.view.View;
 
 import com.android.demo.R;
@@ -17,6 +19,7 @@ import com.example.service.IRemoteInterface;
 
 public class AidlActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private static final String TAG = "AidlActivity1";
     private IRemoteInterface iRemoteInterface;
 
     @Override
@@ -61,14 +64,19 @@ public class AidlActivity extends AppCompatActivity implements View.OnClickListe
         unbindService(connection);
     }
 
-    private ServiceConnection connection = new ServiceConnection() {
+    private final ServiceConnection connection = new ServiceConnection() {
         @Override
         public void onServiceConnected(ComponentName name, IBinder service) {
 //            LocalService.LocalBinder binder = (LocalService.LocalBinder) service;
 //            binder.getString();
-
+            Log.i(TAG, "onServiceConnected: "
+                    + ", name: " + name
+                    + ", pingBinder: " + service.pingBinder()
+                    + ", service: " + service
+            );
             try {
                 iRemoteInterface = IRemoteInterface.Stub.asInterface(service);
+                Log.i(TAG, "onServiceConnected: " + iRemoteInterface);
                 iRemoteInterface.getRemoteString();
             } catch (RemoteException e) {
                 e.printStackTrace();
@@ -78,6 +86,17 @@ public class AidlActivity extends AppCompatActivity implements View.OnClickListe
         @Override
         public void onServiceDisconnected(ComponentName name) {
             iRemoteInterface = null;
+            Log.i(TAG, "onServiceDisconnected: " + name);
+        }
+
+        @Override
+        public void onBindingDied(ComponentName name) {
+            Log.i(TAG, "onBindingDied: ");
+        }
+
+        @Override
+        public void onNullBinding(ComponentName name) {
+            Log.i(TAG, "onNullBinding: ");
         }
     };
 }

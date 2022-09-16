@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModel
-import androidx.lifecycle.ViewModelProviders
+import androidx.lifecycle.ViewModelProvider
 
 class ViewModuleActivity : AppCompatActivity() {
 
@@ -19,7 +19,7 @@ class ViewModuleActivity : AppCompatActivity() {
         }
         setContentView(textView)
 
-        viewModelData = ViewModelProviders.of(this).get(ViewModelData::class.java)
+        viewModelData = ViewModelProvider(this, ViewModelProvider.NewInstanceFactory()).get(ViewModelData::class.java)
 
         textView.setOnClickListener {
             viewModelData.number++

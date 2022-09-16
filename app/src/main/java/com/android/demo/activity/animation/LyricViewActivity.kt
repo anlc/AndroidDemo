@@ -3,7 +3,7 @@ package com.android.demo.activity.animation
 import android.os.Bundle
 import com.android.demo.R
 import com.android.demo.base.BaseActivity
-import kotlinx.android.synthetic.main.activity_lyric_view.*
+import com.android.demo.widget.canvas.lyric.LyricView
 import java.util.*
 
 /**
@@ -17,6 +17,7 @@ class LyricViewActivity : BaseActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_lyric_view)
 
+        val lyricView = findViewById<LyricView>(R.id.lyricView)
         Timer().schedule(object :TimerTask(){
             override fun run() {
                 lyricView.postInvalidate()

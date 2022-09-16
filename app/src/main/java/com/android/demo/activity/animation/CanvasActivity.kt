@@ -2,10 +2,11 @@ package com.android.demo.activity.animation
 
 import android.graphics.*
 import android.os.Bundle
+import android.widget.ImageView
+import androidx.viewbinding.ViewBinding
 import com.android.demo.R
 import com.android.demo.base.BaseActivity
 import com.android.demo.utils.factory.PaintFactory
-import kotlinx.android.synthetic.main.activity_canvas.*
 
 /**
  * <p>
@@ -15,11 +16,20 @@ import kotlinx.android.synthetic.main.activity_canvas.*
  */
 class CanvasActivity : BaseActivity() {
 
+    private lateinit var arcImageView: ImageView
+    private lateinit var imageView: ImageView
+    private lateinit var roundImageView: ImageView
+    private lateinit var drawBitmapView: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_canvas)
+
+        arcImageView = findViewById(R.id.arcImageView)
+        imageView = findViewById(R.id.imageView)
+        roundImageView = findViewById(R.id.roundImageView)
+        drawBitmapView = findViewById(R.id.drawBitmapView)
 
         drawTest()
         drawBitmap()
@@ -36,7 +46,7 @@ class CanvasActivity : BaseActivity() {
         paint.color = Color.RED
         paint.strokeWidth = 3f
         canvas.drawArc(rectF, -30f, 30f, false, paint)
-//        arcImageView.setImageBitmap(bitmap)
+        arcImageView.setImageBitmap(bitmap)
     }
 
     private fun drawRoundImageView() {

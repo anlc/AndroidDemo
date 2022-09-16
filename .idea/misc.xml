@@ -4,7 +4,23 @@
     <asm skipDebug="false" skipFrames="false" skipCode="false" expandFrames="false" />
     <groovy codeStyle="LEGACY" />
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" default="false" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/layout/activity_canvas.xml" value="0.3319746376811594" />
+        <entry key="app/src/main/res/layout/activity_clip.xml" value="0.3319746376811594" />
+        <entry key="app/src/main/res/layout/activity_custom_drawer.xml" value="0.3319746376811594" />
+        <entry key="app/src/main/res/layout/activity_draw_line.xml" value="0.3319746376811594" />
+        <entry key="app/src/main/res/layout/activity_lyric_view.xml" value="0.17604166666666668" />
+        <entry key="app/src/main/res/layout/activity_multi_launcher.xml" value="0.17604166666666668" />
+        <entry key="app/src/main/res/layout/activity_on_click.xml" value="0.33958333333333335" />
+        <entry key="app/src/main/res/layout/activity_scroller.xml" value="0.3319746376811594" />
+        <entry key="app/src/main/res/layout/activity_seek_bar.xml" value="0.33958333333333335" />
+        <entry key="app/src/main/res/xml/fragment_prefernce_demo.xml" value="0.33958333333333335" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

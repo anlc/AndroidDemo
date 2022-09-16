@@ -3,7 +3,7 @@ package com.android.demo.activity.animation
 import android.os.Bundle
 import com.android.demo.R
 import com.android.demo.base.BaseActivity
-import kotlinx.android.synthetic.main.activity_clip.*
+import com.android.demo.widget.canvas.lyric.BombView
 import java.util.*
 
 
@@ -19,6 +19,7 @@ class ClipActivity : BaseActivity(){
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_clip)
 
+        val bombView = findViewById<BombView>(R.id.bombView)
         Timer().schedule(object : TimerTask() {
             override fun run() {
                 bombView.postInvalidate()

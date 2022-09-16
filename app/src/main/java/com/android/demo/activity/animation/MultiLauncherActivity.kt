@@ -1,9 +1,10 @@
 package com.android.demo.activity.animation
 
 import android.os.Bundle
+import android.view.View
 import com.android.demo.R
 import com.android.demo.base.BaseActivity
-import kotlinx.android.synthetic.main.activity_multi_launcher.*
+import com.android.demo.widget.group.MultiLauncherLayout
 
 /**
  * <p>
@@ -17,7 +18,8 @@ class MultiLauncherActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_multi_launcher)
 
-        next.setOnClickListener { multiLauncher.moveToNext() }
-        prev.setOnClickListener { multiLauncher.moveToPrevious() }
+        val multiLauncher = findViewById<MultiLauncherLayout>(R.id.multiLauncher)
+        findViewById<View>(R.id.next).setOnClickListener { multiLauncher.moveToNext() }
+        findViewById<View>(R.id.next).setOnClickListener { multiLauncher.moveToPrevious() }
     }
 }

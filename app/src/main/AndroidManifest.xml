@@ -15,7 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.MainActivity">
+        <activity
+            android:name=".activity.MainActivity"
+            android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -26,6 +29,7 @@
         <!-- 首页类型 -->
         <activity
             android:name=".activity.CustomViewActivity"
+            android:exported="true"
             android:label="custom view demo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,6 +38,7 @@
 
         <activity
             android:name=".activity.DesignActivity"
+            android:exported="true"
             android:label="design lib demo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,6 +47,7 @@
 
         <activity
             android:name=".activity.DemoActivity"
+            android:exported="true"
             android:label="design lib demo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,6 +56,7 @@
 
         <activity
             android:name=".activity.AnimationActivity"
+            android:exported="true"
             android:label="canvas demo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -58,6 +65,7 @@
 
         <activity
             android:name=".activity.JetpackActivity"
+            android:exported="true"
             android:label="jetpack demo">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -67,6 +75,7 @@
         <!-- 自定义view类型 -->
         <activity
             android:name=".activity.custom_view.LuckActivity"
+            android:exported="true"
             android:label="sudoku luck">
             <intent-filter>
                 <action android:name="com.android.demo.custom" />
@@ -75,6 +84,7 @@
 
         <activity
             android:name=".activity.custom_view.FlowTagActivity"
+            android:exported="true"
             android:label="flow tag layout">
             <intent-filter>
                 <action android:name="com.android.demo.custom" />
@@ -83,6 +93,7 @@
 
         <activity
             android:name=".activity.custom_view.AuthCodeActivity"
+            android:exported="true"
             android:label="multi square editView"
             android:windowSoftInputMode="adjustPan|stateAlwaysHidden">
             <intent-filter>
@@ -92,6 +103,7 @@
 
         <activity
             android:name=".activity.custom_view.BannerActivity"
+            android:exported="true"
             android:label="banner">
             <intent-filter>
                 <action android:name="com.android.demo.custom" />
@@ -100,6 +112,7 @@
 
         <activity
             android:name=".activity.custom_view.ListItemActivity"
+            android:exported="true"
             android:label="list item">
             <intent-filter>
                 <action android:name="com.android.demo.custom" />
@@ -108,6 +121,7 @@
 
         <activity
             android:name=".activity.custom_view.SelectViewActivity"
+            android:exported="true"
             android:label="select view">
             <intent-filter>
                 <action android:name="com.android.demo.custom" />
@@ -116,6 +130,7 @@
 
         <activity
             android:name=".activity.custom_view.SelectItemViewActivity"
+            android:exported="true"
             android:label="select view2">
             <intent-filter>
                 <action android:name="com.android.demo.custom" />
@@ -125,6 +140,7 @@
         <!-- design包的使用 -->
         <activity
             android:name=".activity.design.BottomSheetActivity"
+            android:exported="true"
             android:label="bottom sheet">
             <intent-filter>
                 <action android:name="com.android.demo.design.demo" />
@@ -133,6 +149,7 @@
 
         <activity
             android:name=".activity.design.CoordinatorLayoutActivity"
+            android:exported="true"
             android:label="simple coordinator demo">
             <intent-filter>
                 <action android:name="com.android.demo.design.demo" />
@@ -141,6 +158,7 @@
 
         <activity
             android:name=".activity.design.ItemHelperActivity"
+            android:exported="true"
             android:label="recycler view item helper">
             <intent-filter>
                 <action android:name="com.android.demo.design.demo" />
@@ -150,6 +168,7 @@
         <!-- demo -->
         <activity
             android:name=".activity.demo.SeekBarActivity"
+            android:exported="true"
             android:label="seek bar demo">
             <intent-filter>
                 <action android:name="com.android.demo.demo" />
@@ -158,6 +177,7 @@
 
         <activity
             android:name=".activity.demo.AidlActivity"
+            android:exported="true"
             android:label="aidl demo">
             <intent-filter>
                 <action android:name="com.android.demo.demo" />
@@ -168,6 +188,7 @@
 
         <activity
             android:name=".activity.demo.PreferenceDemoActivity"
+            android:exported="true"
             android:label="preference layout demo">
             <intent-filter>
                 <action android:name="com.android.demo.demo" />
@@ -176,6 +197,7 @@
 
         <activity
             android:name=".activity.demo.BroadcastReceiverActivity"
+            android:exported="true"
             android:label="broadcast receiver demo">
             <intent-filter>
                 <action android:name="com.android.demo.demo" />
@@ -184,6 +206,7 @@
 
         <activity
             android:name=".activity.demo.IntentActivity"
+            android:exported="true"
             android:label="intent test">
             <intent-filter>
                 <action android:name="com.android.demo.demo" />
@@ -192,6 +215,7 @@
 
         <activity
             android:name=".activity.demo.Intent2Activity"
+            android:exported="true"
             android:label="intent test">
             <intent-filter>
                 <action android:name="com.android.demo.demo" />
@@ -201,6 +225,7 @@
         <!-- animation -->
         <activity
             android:name=".activity.animation.RotationActivity"
+            android:exported="true"
             android:label="rotation canvas">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
@@ -209,6 +234,7 @@
 
         <activity
             android:name=".activity.animation.CanvasActivity"
+            android:exported="true"
             android:label="bitmap canvas">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
@@ -217,6 +243,7 @@
 
         <activity
             android:name=".activity.animation.ClockActivity"
+            android:exported="true"
             android:label="bitmap canvas">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
@@ -225,6 +252,7 @@
 
         <activity
             android:name=".activity.animation.ScrollerActivity"
+            android:exported="true"
             android:label="scroller method">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
@@ -233,6 +261,7 @@
 
         <activity
             android:name=".activity.animation.MultiLauncherActivity"
+            android:exported="true"
             android:label="velocity tracker">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
@@ -241,6 +270,7 @@
 
         <activity
             android:name=".activity.animation.CustomDrawerActivity"
+            android:exported="true"
             android:label="custom drawer">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
@@ -249,6 +279,7 @@
 
         <activity
             android:name=".activity.animation.PathActivity"
+            android:exported="true"
             android:label="custom path">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
@@ -257,6 +288,7 @@
 
         <activity
             android:name=".activity.animation.ClipActivity"
+            android:exported="true"
             android:label="clip demo">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
@@ -265,6 +297,7 @@
 
         <activity
             android:name=".activity.animation.DrawLineActivity"
+            android:exported="true"
             android:label="draw line demo">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
@@ -273,6 +306,7 @@
 
         <activity
             android:name=".activity.animation.ShaderActivity"
+            android:exported="true"
             android:label="shader demo">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
@@ -281,6 +315,7 @@
 
         <activity
             android:name=".activity.animation.GradientActivity"
+            android:exported="true"
             android:label="gradient demo">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
@@ -289,6 +324,7 @@
 
         <activity
             android:name=".activity.animation.LyricViewActivity"
+            android:exported="true"
             android:label="lyric view demo">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
@@ -297,6 +333,7 @@
 
         <activity
             android:name=".activity.animation.FontMetricsActivity"
+            android:exported="true"
             android:label="font metrics demo">
             <intent-filter>
                 <action android:name="com.android.demo.animation" />
@@ -306,6 +343,7 @@
         <!-- jetpack -->
         <activity
             android:name=".activity.jetpack.DataBindingActivity"
+            android:exported="true"
             android:label="data binding">
             <intent-filter>
                 <action android:name="com.android.demo.jetpack" />
@@ -314,6 +352,7 @@
 
         <activity
             android:name=".activity.jetpack.ObservableJavaActivity"
+            android:exported="true"
             android:label="observable java">
             <intent-filter>
                 <action android:name="com.android.demo.jetpack" />
@@ -322,48 +361,61 @@
 
         <activity
             android:name=".activity.jetpack.ObservableActivity"
+            android:exported="true"
             android:label="observable kotlin">
             <intent-filter>
                 <action android:name="com.android.demo.jetpack" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.jetpack.RecyclerViewActivity"
+        <activity
+            android:name=".activity.jetpack.RecyclerViewActivity"
+            android:exported="true"
             android:label="data binding glide load image">
             <intent-filter>
                 <action android:name="com.android.demo.jetpack" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.jetpack.LiveDataActivity"
+        <activity
+            android:name=".activity.jetpack.LiveDataActivity"
+            android:exported="true"
             android:label="live data demo">
             <intent-filter>
                 <action android:name="com.android.demo.jetpack" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.jetpack.CustomViewBindingActivity"
+        <activity
+            android:name=".activity.jetpack.CustomViewBindingActivity"
+            android:exported="true"
             android:label="custom view">
             <intent-filter>
                 <action android:name="com.android.demo.jetpack" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.jetpack.SimpleLiveDataActivity"
+        <activity
+            android:name=".activity.jetpack.SimpleLiveDataActivity"
+            android:exported="true"
             android:label="simple live data">
             <intent-filter>
                 <action android:name="com.android.demo.jetpack" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".activity.jetpack.ObservableTestActivity"
+        <activity
+            android:name=".activity.jetpack.ObservableTestActivity"
+            android:exported="true"
             android:label="simple observable test">
             <intent-filter>
                 <action android:name="com.android.demo.jetpack" />
             </intent-filter>
         </activity>
 
-        <receiver android:name=".activity.demo.BroadcastReceiverActivity$OrderBroadcastReceiver">
+        <receiver
+            android:name=".activity.demo.BroadcastReceiverActivity$OrderBroadcastReceiver"
+            android:exported="true">
             <intent-filter android:priority="1">
                 <action android:name="order_broad" />
             </intent-filter>
