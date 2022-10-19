@@ -18,6 +18,6 @@ public class CanvasActivity extends ManifestActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentAndAction(Constants.ACTION_ANIMATION);
+        setContentAndAction(Constants.ACTION_CANVAS);
     }
 }

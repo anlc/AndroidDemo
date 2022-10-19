@@ -15,7 +15,9 @@ public class Constants {
     // demo 类型的 action
     public static final String ACTION_APP_DEMO = "com.android.demo.demo";
     // canvas 类型的 action
-    public static final String ACTION_ANIMATION = "com.android.demo.canvas";
+    public static final String ACTION_CANVAS = "com.android.demo.canvas";
+    // animation 类型的 action
+    public static final String ACTION_ANIMATION = "com.android.demo.animation";
     // jetpack 类型的 action
     public static final String ACTION_JETPACK = "com.android.demo.jetpack";
 }

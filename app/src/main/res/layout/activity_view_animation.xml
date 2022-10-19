@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <CheckBox
+            android:id="@+id/radio_scale"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="scale"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/start" />
+
+        <CheckBox
+            android:id="@+id/radio_alpha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="alpha"
+            app:layout_constraintBottom_toBottomOf="@id/radio_scale"
+            app:layout_constraintStart_toEndOf="@id/radio_scale"
+            app:layout_constraintTop_toTopOf="@id/radio_scale" />
+
+        <CheckBox
+            android:id="@+id/radio_rotate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="rotate"
+            app:layout_constraintBottom_toBottomOf="@id/radio_scale"
+            app:layout_constraintStart_toEndOf="@id/radio_alpha"
+            app:layout_constraintTop_toTopOf="@id/radio_scale" />
+
+        <CheckBox
+            android:id="@+id/radio_translate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="translate"
+            app:layout_constraintBottom_toBottomOf="@id/radio_scale"
+            app:layout_constraintStart_toEndOf="@id/radio_rotate"
+            app:layout_constraintTop_toTopOf="@id/radio_scale" />
+
+        <com.android.demo.widget.TitleSeekBar
+            android:id="@+id/scale_duration_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/radio_scale"
+            app:title="scale: " />
+
+        <com.android.demo.widget.TitleSeekBar
+            android:id="@+id/alpha_duration_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scale_duration_value"
+            app:title="alpha: " />
+
+        <com.android.demo.widget.TitleSeekBar
+            android:id="@+id/rotate_duration_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/alpha_duration_value"
+            app:title="rotate: " />
+
+        <com.android.demo.widget.TitleSeekBar
+            android:id="@+id/translate_duration_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rotate_duration_value"
+            app:title="translate: " />
+
+
+        <ImageView
+            android:id="@+id/animation_view"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:background="#ccc"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

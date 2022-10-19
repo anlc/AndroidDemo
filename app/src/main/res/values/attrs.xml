@@ -50,4 +50,10 @@
         <attr name="item_padding" format="dimension" />
         <attr name="android:orientation" />
     </declare-styleable>
+
+    <declare-styleable name="TitleSeekBar">
+        <attr name="title" />
+        <attr name="max" format="integer" />
+        <attr name="min" format="integer" />
+    </declare-styleable>
 </resources>

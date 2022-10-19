@@ -64,6 +64,15 @@
         </activity>
 
         <activity
+            android:name=".activity.AnimationActivity"
+            android:exported="true"
+            android:label="animation demo">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+
+        <activity
             android:name=".activity.JetpackActivity"
             android:exported="true"
             android:label="jetpack demo">
@@ -222,7 +231,7 @@
             </intent-filter>
         </activity>
 
-        <!-- animation -->
+        <!-- canvas -->
         <activity
             android:name=".activity.canvas.RotationActivity"
             android:exported="true"
@@ -337,6 +346,24 @@
             android:label="font metrics demo">
             <intent-filter>
                 <action android:name="com.android.demo.canvas" />
+            </intent-filter>
+        </activity>
+
+        <!-- animation -->
+        <activity
+            android:name=".activity.animation.ViewAnimationActivity"
+            android:exported="true"
+            android:label="view animation">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.animation.ValueAnimationActivity"
+            android:exported="true"
+            android:label="value animation">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
             </intent-filter>
         </activity>
 
