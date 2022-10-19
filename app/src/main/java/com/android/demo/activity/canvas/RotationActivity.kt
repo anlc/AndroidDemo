@@ -1,4 +1,4 @@
-package com.android.demo.activity.animation
+package com.android.demo.activity.canvas
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

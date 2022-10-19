@@ -12,7 +12,7 @@ import com.android.demo.base.ManifestActivity;
  * @author anlc
  * @date 2019-06-12
  */
-public class AnimationActivity extends ManifestActivity {
+public class CanvasActivity extends ManifestActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {

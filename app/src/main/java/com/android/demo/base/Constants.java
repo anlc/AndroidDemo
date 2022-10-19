@@ -6,16 +6,16 @@ package com.android.demo.base;
 
 public class Constants {
 
-    //自定义view 类型的 action
+    // 自定义view 类型的 action
     public static final String ACTION_CUSTOM_VIEW = "com.android.demo.custom";
-    //使用库的demo 类型的 action
+    // 使用库的demo 类型的 action
     public static final String ACTION_LIB_DEMO = "com.android.demo.lib.demo";
-    //使用design包下的demo 类型的 action
+    // 使用design包下的demo 类型的 action
     public static final String ACTION_DESIGN_DEMO = "com.android.demo.design.demo";
-    //demo 类型的 action
+    // demo 类型的 action
     public static final String ACTION_APP_DEMO = "com.android.demo.demo";
-    //动画 类型的 action
-    public static final String ACTION_ANIMATION = "com.android.demo.animation";
-    //jetpack 类型的 action
+    // canvas 类型的 action
+    public static final String ACTION_ANIMATION = "com.android.demo.canvas";
+    // jetpack 类型的 action
     public static final String ACTION_JETPACK = "com.android.demo.jetpack";
 }

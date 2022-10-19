@@ -1,9 +1,8 @@
-package com.android.demo.activity.animation
+package com.android.demo.activity.canvas
 
 import android.graphics.*
 import android.os.Bundle
 import android.widget.ImageView
-import androidx.viewbinding.ViewBinding
 import com.android.demo.R
 import com.android.demo.base.BaseActivity
 import com.android.demo.utils.factory.PaintFactory

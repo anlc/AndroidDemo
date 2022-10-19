@@ -1,4 +1,4 @@
-package com.android.demo.activity.animation
+package com.android.demo.activity.canvas
 
 import android.os.Bundle
 import com.android.demo.R
@@ -8,12 +8,13 @@ import com.android.demo.base.BaseActivity
  * <p>
  *
  * @author anlc
- * @date 2019-11-04
+ * @date 2019-12-19
  */
-class ClockActivity : BaseActivity() {
+class FontMetricsActivity : BaseActivity(){
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_clock)
+        setContentView(R.layout.activity_font_metrics)
+
     }
 }

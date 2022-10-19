@@ -9,6 +9,7 @@
       <map>
         <entry key="app/src/main/res/layout/activity_canvas.xml" value="0.3319746376811594" />
         <entry key="app/src/main/res/layout/activity_clip.xml" value="0.3319746376811594" />
+        <entry key="app/src/main/res/layout/activity_clock.xml" value="0.3292572463768116" />
         <entry key="app/src/main/res/layout/activity_custom_drawer.xml" value="0.3319746376811594" />
         <entry key="app/src/main/res/layout/activity_draw_line.xml" value="0.3319746376811594" />
         <entry key="app/src/main/res/layout/activity_lyric_view.xml" value="0.17604166666666668" />
@@ -16,7 +17,10 @@
         <entry key="app/src/main/res/layout/activity_on_click.xml" value="0.33958333333333335" />
         <entry key="app/src/main/res/layout/activity_scroller.xml" value="0.3319746376811594" />
         <entry key="app/src/main/res/layout/activity_seek_bar.xml" value="0.33958333333333335" />
+        <entry key="app/src/main/res/layout/activity_select_item_view.xml" value="0.2930253623188406" />
         <entry key="app/src/main/res/xml/fragment_prefernce_demo.xml" value="0.33958333333333335" />
+        <entry key="httpdemo/src/main/res/layout/activity_main.xml" value="0.34057971014492755" />
+        <entry key="httpdemo/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1" />
       </map>
     </option>
   </component>

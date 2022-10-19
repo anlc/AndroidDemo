@@ -55,7 +55,7 @@
         </activity>
 
         <activity
-            android:name=".activity.AnimationActivity"
+            android:name=".activity.CanvasActivity"
             android:exported="true"
             android:label="canvas demo">
             <intent-filter>
@@ -224,119 +224,119 @@
 
         <!-- animation -->
         <activity
-            android:name=".activity.animation.RotationActivity"
+            android:name=".activity.canvas.RotationActivity"
             android:exported="true"
             android:label="rotation canvas">
             <intent-filter>
-                <action android:name="com.android.demo.animation" />
+                <action android:name="com.android.demo.canvas" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.animation.CanvasActivity"
+            android:name=".activity.canvas.CanvasActivity"
             android:exported="true"
             android:label="bitmap canvas">
             <intent-filter>
-                <action android:name="com.android.demo.animation" />
+                <action android:name="com.android.demo.canvas" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.animation.ClockActivity"
+            android:name=".activity.canvas.ClockActivity"
             android:exported="true"
             android:label="bitmap canvas">
             <intent-filter>
-                <action android:name="com.android.demo.animation" />
+                <action android:name="com.android.demo.canvas" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.animation.ScrollerActivity"
+            android:name=".activity.canvas.ScrollerActivity"
             android:exported="true"
             android:label="scroller method">
             <intent-filter>
-                <action android:name="com.android.demo.animation" />
+                <action android:name="com.android.demo.canvas" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.animation.MultiLauncherActivity"
+            android:name=".activity.canvas.MultiLauncherActivity"
             android:exported="true"
             android:label="velocity tracker">
             <intent-filter>
-                <action android:name="com.android.demo.animation" />
+                <action android:name="com.android.demo.canvas" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.animation.CustomDrawerActivity"
+            android:name=".activity.canvas.CustomDrawerActivity"
             android:exported="true"
             android:label="custom drawer">
             <intent-filter>
-                <action android:name="com.android.demo.animation" />
+                <action android:name="com.android.demo.canvas" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.animation.PathActivity"
+            android:name=".activity.canvas.PathActivity"
             android:exported="true"
             android:label="custom path">
             <intent-filter>
-                <action android:name="com.android.demo.animation" />
+                <action android:name="com.android.demo.canvas" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.animation.ClipActivity"
+            android:name=".activity.canvas.ClipActivity"
             android:exported="true"
             android:label="clip demo">
             <intent-filter>
-                <action android:name="com.android.demo.animation" />
+                <action android:name="com.android.demo.canvas" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.animation.DrawLineActivity"
+            android:name=".activity.canvas.DrawLineActivity"
             android:exported="true"
             android:label="draw line demo">
             <intent-filter>
-                <action android:name="com.android.demo.animation" />
+                <action android:name="com.android.demo.canvas" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.animation.ShaderActivity"
+            android:name=".activity.canvas.ShaderActivity"
             android:exported="true"
             android:label="shader demo">
             <intent-filter>
-                <action android:name="com.android.demo.animation" />
+                <action android:name="com.android.demo.canvas" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.animation.GradientActivity"
+            android:name=".activity.canvas.GradientActivity"
             android:exported="true"
             android:label="gradient demo">
             <intent-filter>
-                <action android:name="com.android.demo.animation" />
+                <action android:name="com.android.demo.canvas" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.animation.LyricViewActivity"
+            android:name=".activity.canvas.LyricViewActivity"
             android:exported="true"
             android:label="lyric view demo">
             <intent-filter>
-                <action android:name="com.android.demo.animation" />
+                <action android:name="com.android.demo.canvas" />
             </intent-filter>
         </activity>
 
         <activity
-            android:name=".activity.animation.FontMetricsActivity"
+            android:name=".activity.canvas.FontMetricsActivity"
             android:exported="true"
             android:label="font metrics demo">
             <intent-filter>
-                <action android:name="com.android.demo.animation" />
+                <action android:name="com.android.demo.canvas" />
             </intent-filter>
         </activity>
 

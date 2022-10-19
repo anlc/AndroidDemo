@@ -1,4 +1,4 @@
-package com.android.demo.activity.animation
+package com.android.demo.activity.canvas
 
 import android.os.Bundle
 import com.android.demo.R
@@ -10,9 +10,10 @@ import com.android.demo.base.BaseActivity
  * @author anlc
  * @date 2019-12-16
  */
-class DrawLineActivity : BaseActivity(){
+class ShaderActivity : BaseActivity(){
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_draw_line)
+        setContentView(R.layout.activity_shader)
     }
 }
