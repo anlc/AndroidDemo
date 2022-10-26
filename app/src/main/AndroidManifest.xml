@@ -366,6 +366,30 @@
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.animation.DrawableAnimationActivity"
+            android:exported="true"
+            android:label="drawable animation">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.animation.ShowAndHideAnimationActivity"
+            android:exported="true"
+            android:label="show hide animation">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.animation.CardFlipActivity"
+            android:exported="true"
+            android:label="card flip animation">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
+            </intent-filter>
+        </activity>
 
         <!-- jetpack -->
         <activity

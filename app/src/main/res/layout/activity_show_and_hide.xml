@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/fade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="crossfade"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/content"
+            style="?android:textAppearanceMedium"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.2"
+            android:padding="16dp"
+            android:text="@string/lorem_ipsum"
+            app:layout_constraintTop_toBottomOf="@id/fade" />
+
+        <ProgressBar
+            android:id="@+id/loading_spinner"
+            style="?android:progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fade" />
+
+        <Button
+            android:id="@+id/circular_reveal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="circular reveal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/content" />
+
+        <ImageView
+            android:id="@+id/animation_view"
+            android:layout_width="500dp"
+            android:layout_height="500dp"
+            android:src="#a6c"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/circular_reveal" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

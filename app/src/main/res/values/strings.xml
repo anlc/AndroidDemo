@@ -7,4 +7,8 @@
     <string name="send_orden">发送有序广播</string>
     <string name="refresh">刷新</string>
     <string name="start">start</string>
+    <string name="lorem_ipsum">lorem_ipsumlorem_ipsumlorem_ipsumlorem_ipsumlorem_ipsumlorem_ipsumlorem_ipsumlorem_ipsum</string>
+    <string name="card_back_title">card_back_title</string>
+    <string name="card_back_description">card_back_description</string>
+    <string name="description_image_1">description_image_1</string>
 </resources>
