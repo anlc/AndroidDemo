@@ -10,4 +10,5 @@
     <color name="color_333333">#333333</color>
     <color name="color_666666">#666666</color>
     <color name="color_cccccc">#cccccc</color>
+    <color name="bg_color">#a6c</color>
 </resources>

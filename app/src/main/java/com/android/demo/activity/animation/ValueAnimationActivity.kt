@@ -21,29 +21,26 @@ class ValueAnimationActivity : BaseActivity() {
             R.layout.activity_value_animation
         ) as ActivityValueAnimationBinding
 
+        // ObjectAnimator translation x animation
         activity.translationX.setOnClickListener {
-            ObjectAnimator
-                .ofFloat(activity.animationView, "translationX", 0f, 100f)
+            ObjectAnimator.ofFloat(activity.animationView, "translationX", 0f, 100f)
                 .apply {
                     duration = 400
                     start()
                 }
         }
 
-        val toLeft = ObjectAnimator
-            .ofFloat(activity.animationView, "translationX", -100f)
+        // AnimatorSet animation
+        val toLeft = ObjectAnimator.ofFloat(activity.animationView, "translationX", -100f)
             .apply { duration = 1500 }
 
-        val toShow = ObjectAnimator
-            .ofFloat(activity.animationView, "alpha", 0f, 1f)
+        val toShow = ObjectAnimator.ofFloat(activity.animationView, "alpha", 0f, 1f)
             .apply { duration = 1500 }
 
-        val toBack = ObjectAnimator
-            .ofFloat(activity.animationView, "translationX", 0f)
+        val toBack = ObjectAnimator.ofFloat(activity.animationView, "translationX", 0f)
             .apply { duration = 1500 }
 
-        val toHide = ObjectAnimator
-            .ofFloat(activity.animationView, "alpha", 1f, 0f)
+        val toHide = ObjectAnimator.ofFloat(activity.animationView, "alpha", 1f, 0f)
             .apply { duration = 1500 }
 
         activity.translationXSet.setOnClickListener {
@@ -51,12 +48,14 @@ class ValueAnimationActivity : BaseActivity() {
                 play(toHide.clone()).before(toLeft)
                 play(toLeft).with(toShow.clone())
                 play(toBack).with(toHide.clone())
+                // 先播放 toLeft 后播放 toBack
                 play(toLeft).before(toBack)
                 play(toBack).before(toShow.clone())
                 start()
             }
         }
 
+        // AnimatorSet scale animation
         val scaleX =
             ObjectAnimator.ofFloat(activity.scaleView, "scaleX", 0.2f, 1f).apply { duration = 200 }
         val scaleY =
@@ -73,6 +72,7 @@ class ValueAnimationActivity : BaseActivity() {
             }
         }
 
+        // keyframe animation
         activity.keyframe.setOnClickListener {
             val k1 = Keyframe.ofFloat(0f, 0f)
             val k2 = Keyframe.ofFloat(0.5f, 360f)
@@ -84,6 +84,7 @@ class ValueAnimationActivity : BaseActivity() {
             }
         }
 
+        // PropertyValuesHolder animation
         activity.propertyAnimation.setOnClickListener {
             val x = PropertyValuesHolder.ofFloat("x", 50f)
             val y = PropertyValuesHolder.ofFloat("y", 100f)
@@ -93,12 +94,17 @@ class ValueAnimationActivity : BaseActivity() {
             }
         }
 
+        // ViewProperty animation
         activity.viewPropertyAnimation.setOnClickListener {
             activity.animationView.animate().x(50f).y(100f).duration = 2000
         }
 
+        // AnimatorInflater load xml 
         activity.loadAnimationXml.setOnClickListener {
-            (AnimatorInflater.loadAnimator(baseContext, R.animator.property_animator) as AnimatorSet).apply {
+            (AnimatorInflater.loadAnimator(
+                baseContext,
+                R.animator.property_animator
+            ) as AnimatorSet).apply {
                 setTarget(activity.animationView)
                 start()
             }

@@ -42,6 +42,10 @@ class ShowAndHideAnimationActivity : BaseActivity() {
         }
     }
 
+    /**
+     * 淡入淡出
+     * 使用ViewPropertyAnimation切换两个View显示状态
+     */
     private fun fade(toShowView: View, toHideView: View) {
         toShowView.apply {
             alpha = 0f
@@ -62,8 +66,10 @@ class ShowAndHideAnimationActivity : BaseActivity() {
             })
     }
 
+    /**
+     * 揭示圆形动画显示
+     */
     private fun show(view: View) {
-
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             view.visibility = View.VISIBLE
             return
@@ -84,6 +90,9 @@ class ShowAndHideAnimationActivity : BaseActivity() {
         animator.start()
     }
 
+    /**
+     * 揭示圆形动画隐藏
+     */
     private fun hide(view: View) {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.LOLLIPOP) {
             view.visibility = View.INVISIBLE

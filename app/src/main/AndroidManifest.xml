@@ -390,6 +390,30 @@
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.animation.SceneActivity"
+            android:exported="true"
+            android:label="scene translation animation">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.animation.SceneMainActivity"
+            android:exported="true"
+            android:label="add scene animation">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.animation.TransDemoActivity"
+            android:exported="true"
+            android:label="trans demo animation">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
+            </intent-filter>
+        </activity>
 
         <!-- jetpack -->
         <activity

@@ -21,16 +21,21 @@ class ViewAnimationActivity : BaseActivity() {
         activity.start.setOnClickListener {
             val set = AnimationSet(true)
 
+            // scale animation
             if (activity.radioScale.isChecked) {
                 val animation = ScaleAnimation(0f, 1f, 0f, 1f, 0f, 0f)
                 animation.duration = activity.scaleDurationValue.getValue()!!.toLong()
                 set.addAnimation(animation)
             }
+
+            // alpha animation
             if (activity.radioAlpha.isChecked) {
                 val animation = AlphaAnimation(0f, 1f)
                 animation.duration = activity.alphaDurationValue.getValue()!!.toLong()
                 set.addAnimation(animation)
             }
+
+            // rotate animation
             if (activity.radioRotate.isChecked) {
                 val animation = RotateAnimation(
                     0f,
@@ -41,6 +46,8 @@ class ViewAnimationActivity : BaseActivity() {
                 animation.duration = activity.rotateDurationValue.getValue()!!.toLong()
                 set.addAnimation(animation)
             }
+
+            // translate animation
             if (activity.radioTranslate.isChecked) {
                 val animation = TranslateAnimation(
                     0f, activity.animationView.width.toFloat(),
