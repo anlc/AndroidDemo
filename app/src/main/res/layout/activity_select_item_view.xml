@@ -15,8 +15,9 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:layout_width="20dp"
-        android:layout_height="20dp"
+        android:id="@+id/select_indicator_view"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
         android:background="@color/color_cccccc"
         app:layout_constraintBottom_toBottomOf="@id/select_item_view"
         app:layout_constraintRight_toLeftOf="@id/select_item_view"

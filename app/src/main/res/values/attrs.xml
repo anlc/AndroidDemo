@@ -47,6 +47,8 @@
     <declare-styleable name="SelectItemView">
         <attr name="item_text_color" format="reference|color" />
         <attr name="item_text_size" format="dimension" />
+        <attr name="select_text_color" format="reference|color" />
+        <attr name="select_text_size" format="dimension" />
         <attr name="item_padding" format="dimension" />
         <attr name="android:orientation" />
     </declare-styleable>

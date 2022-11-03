@@ -1,6 +1,7 @@
 package com.android.demo.activity.custom_view;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.annotation.Nullable;
@@ -21,6 +22,7 @@ import java.util.List;
 public class SelectItemViewActivity extends BaseActivity {
 
     SelectItemView selectItemView;
+    int toIndex = 0;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -39,6 +41,14 @@ public class SelectItemViewActivity extends BaseActivity {
             @Override
             public void onSelected(int position, String selectItem) {
                 Toast.makeText(getBaseContext(), selectItem, Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        findViewById(R.id.select_indicator_view).setOnClickListener(v -> {
+            selectItemView.smoothScrollToIndex(toIndex);
+            toIndex ++;
+            if (toIndex > 10) {
+                toIndex = 0;
             }
         });
     }
