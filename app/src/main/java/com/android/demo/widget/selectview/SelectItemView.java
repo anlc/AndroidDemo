@@ -45,6 +45,7 @@ public class SelectItemView extends FrameLayout {
     private OnSelectChangedListener mOnSelectChangedListener;
     private TextView mSelectedView;
     private int mSelectIndex;
+    private boolean mIsMoved;
 
     public SelectItemView(Context context) {
         this(context, null);
@@ -108,8 +109,6 @@ public class SelectItemView extends FrameLayout {
             t += view.getHeight();
         }
     }
-
-    private boolean mIsMoved;
 
     @Override
     public boolean onTouchEvent(MotionEvent ev) {

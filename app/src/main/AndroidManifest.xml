@@ -414,6 +414,14 @@
                 <action android:name="com.android.demo.animation" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".activity.animation.DiagonalFlipActivity"
+            android:exported="true"
+            android:label="diagonal flip animation">
+            <intent-filter>
+                <action android:name="com.android.demo.animation" />
+            </intent-filter>
+        </activity>
 
         <!-- jetpack -->
         <activity
